@@ -1,0 +1,86 @@
+.page-btn {
+    background: var(--theme);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 32px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    font-weight: normal;
+    font-size: 13px;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .selected-page-btn {
+    background: #D3F0DB;
+border-radius: 3px;
+  }
+  
+  .arrow-btn {
+    background: var(--theme);
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 32px !important;
+    height: 34px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text-light-blue {
+    color: var(--font-color2);
+  }
+  
+  
+  .custom-pageSize-filter {
+    background: var(--theme)!important;
+    border: 1px solid #A7E0B7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 34px;
+  }
+  
+  .dropdown-icon {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    color: #2E8540;
+  }
+  
+  ::ng-deep .custom-pageSize-filter .mat-select-trigger {
+    height: 100% !important;
+  }
+  
+  ::ng-deep .custom-pageSize-filter .mat-select-value {
+    vertical-align: middle !important;
+    padding-left: 6px;
+    font-weight: normal !important;
+    font-size: 15px !important;
+    color: var(--font-color) !important;
+    
+  }
+  
+  ::ng-deep .custom-pageSize-filter .mat-select-arrow {
+    opacity: 0 !important;
+  }
+  
+  .options-text {
+    font-weight: 400;
+    font-size: 14px!important;
+    color: #100C47;
+    
+  }
+  .options-text:hover{
+    background-color: var(--filter-hover)!important;
+  }
+  .wd-55px {
+    width: 55px;
+  }
+  .arrow{
+    color: var(--font-color);
+  }

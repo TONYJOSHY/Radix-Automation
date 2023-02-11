@@ -1,0 +1,90 @@
+<div class="heading-grey">
+
+  <div class="d-flex align-items-center">
+    <span *ngIf="isbold"> {{label}}</span>
+    <span *ngIf="!isbold" class="font-normal"> {{label}}</span>
+    <span *ngIf="type == 3 || type == 8">:</span>
+    <span *ngIf="type == 3" class="text-sm p-1 pl-lg-3 text-dark font-bold ">
+      {{field}}
+    </span>
+    <span *ngIf="type == 8" class="text-sm font-bold card ml-2 text-primary px-3 py-1  ">
+      {{field}}
+    </span>
+    <span *ngIf="type == 9 " class="text-sm font-bold status-box  ml-2 px-3 py-1"
+      [ngClass]="{'status-box-success':status_type==='ok','status-box-error':status_type==='error','status-box-warning':status_type==='warning' }">
+      {{field}}
+    </span>
+
+  </div>
+  <!-- horizontal label  -->
+
+
+  <!-- horizontal label with copy -->
+  <span *ngIf="type == 4" class="text-default font-medium pl-lg-3">
+    <span>{{field}}</span> &nbsp;
+    <img [cdkCopyToClipboard]="field" class="mb-1 cursor-pointer" height="17" src="assets/images/copy2clipboard.svg"
+      alt="" *ngIf="field" (mouseenter)="$event.stopImmediatePropagation()"
+      (mouseleave)="$event.stopImmediatePropagation()" matTooltip="Copied to clipboard"
+      [matTooltipClass]="'copied-tooltip'" #tooltip2="matTooltip" (click)="tooltipTrigger2(tooltip2)">
+  </span>
+
+  <!-- horizontal link with copy -->
+  <span *ngIf="type == 5" class="text-default font-medium">
+    &nbsp; <span class="underline">{{field}}</span> &nbsp;
+    <img [cdkCopyToClipboard]="field" class="mb-1 cursor-pointer" height="17" src="assets/images/copy2clipboard.svg"
+      alt="" *ngIf="field">
+  </span>
+
+  <div *ngIf="type == 0" class="text-dark text-sm font-normal ">
+    <div class="d-flex justify-content-between ellipsis">
+      <span class="ellipsis mt-2 font-gray fw-400 ">{{field}}</span>
+
+    </div>
+  </div>
+  <div *ngIf="type == 10" class="text-dark text-sm font-normal ">
+    <div class="d-flex ellipsis align-items-center">
+      <span class="ellipsis mt-2 font-gray fw-400 card1 text-center p-2 w-75 ">{{field}}</span>
+      <span class="ml-3 disabled-font"> {{' & ' +count + ' more'}}</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- simple -->
+
+
+<!-- with copy -->
+<div *ngIf="type == 1" class="text-default text-sm font-medium">
+  <span>{{field}}</span> &nbsp;
+  <img [cdkCopyToClipboard]="field" class="mb-1 cursor-pointer" height="17" src="assets/images/copy2clipboard.svg"
+    alt="" *ngIf="field" (mouseenter)="$event.stopImmediatePropagation()"
+    (mouseleave)="$event.stopImmediatePropagation()" matTooltip="Copied to clipboard"
+    [matTooltipClass]="'copied-tooltip'" #tooltip="matTooltip" (click)="tooltipTrigger(tooltip)">
+</div>
+
+<!-- images -->
+<div class="d-flex position-relative flex-wrap" *ngIf="type == 2">
+  <div class="text-secondary font-wt-700">
+    <span *ngFor="let img of field; let i = index;let last = last;" class="coordinator-image"
+      [ngStyle]="{ 'left': i * 15 + 'px', 'opacity': i * .3 }">
+      <img height="20" [src]="img.src" alt="">
+    </span>
+  </div>
+  <div class="d-flex order-2 flex-wrap">
+    <img height="20" src="assets/images/transaction/add-plus.svg" alt="" *ngIf="hasAddSign" (click)="addSignClicked()">
+  </div>
+</div>
+
+<!-- edit -->
+<div *ngIf="type == 6" class="text-default font-medium">
+  <span>{{field}}</span> &nbsp;
+  <img class="mb-1 cursor-pointer" height="17" src="assets/images/edit-icon.svg" alt="edit" (click)="openEdit()">
+</div>
+
+
+<div *ngIf="type == 7" class="text-default text-xs font-600 with-border p-4 mt-3">
+  <div class="ellipsis">
+    {{field}}
+  </div>
+
+</div>

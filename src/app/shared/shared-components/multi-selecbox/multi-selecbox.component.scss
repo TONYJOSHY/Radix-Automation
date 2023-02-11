@@ -1,0 +1,100 @@
+.box-style {
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.11);
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  padding: 19px 25px;
+}
+
+.border-btm {
+  border-bottom: 0.6px solid #E9E9E9;
+}
+
+.body-scroll {
+  // height: 250px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.form-input {
+  background: #FFFFFF;
+  border: 1px solid var(--spring-rain) !important;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 45px;
+  padding: 10px 15px;
+}
+
+.form-input-text {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  color: #BABABA;
+}
+
+.chip {
+  background: #F8F5FF;
+  ;
+  border: 1px solid #CFD8E6;
+  border-radius: 8px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px 13px 5px 10px;
+
+}
+
+.img-circle {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-image-icon {
+  position: relative;
+  bottom: 8px;
+  right: 8px;
+}
+
+.text-placeholder {
+  color: var(--placeholder)
+}
+
+.selected {
+  background: #EAF3EC;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.diffrence {
+  color: var(--font-color-3);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#item-close {
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+  margin-left: 1rem !important;
+  margin-bottom: .2rem !important;
+  cursor: pointer !important;
+}
+
+.text-placeholder-2 {
+  color: rgba(0, 0, 0, 0.42);
+}
+
+.select-arrow{
+  color: var(--primary, #01A747);
+}
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  width: 15px !important;
+  height: 15px !important;
+}

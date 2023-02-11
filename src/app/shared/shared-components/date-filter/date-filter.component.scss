@@ -1,0 +1,25 @@
+.custom-filter {
+    // background: #F7F9FA;
+    border: 1px solid #CFD8E6;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 47px;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: var(--font-color);
+    display: block;
+}
+
+.custom-filter:focus {
+    border: 1px solid #1AD083 !important;
+}
+
+#datepicker .mat-input-element{
+    font-size: 15px !important;
+    margin-top: .4rem !important;
+}
+
+#date-clear{
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+}

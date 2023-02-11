@@ -1,0 +1,10 @@
+<div class="snack-container">
+  <div class="snack-container-message">
+      <div class="d-flex align-items-center">
+          <mat-icon *ngIf="data.type == 'success'" class="icon-size">check_circle</mat-icon>
+          <mat-icon *ngIf="data.type == 'error'" class="icon-size">error</mat-icon>
+          <mat-icon *ngIf="data.type == 'warning'" class="icon-size">report</mat-icon>
+          <span class="ml-3 msg">{{data.message | translate}}</span>
+      </div>
+  </div>
+</div>

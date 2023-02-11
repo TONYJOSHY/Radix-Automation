@@ -1,0 +1,8 @@
+<app-header (toggleSideBar)="sideToggle($event)"></app-header>
+<app-side-bar *ngIf="showComponents" [isExpand]="isExpanded"></app-side-bar>
+
+<div *ngIf="showComponents" class="main-content" [class]="className">
+  <router-outlet></router-outlet>
+</div>
+
+<router-outlet *ngIf="!showComponents"></router-outlet>

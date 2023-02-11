@@ -1,0 +1,18 @@
+<!-- breadcrumbs to use when drilldown to deatail pages -->
+<ol *ngIf="breadcrumbs.length > 1" class="breadcrumb">
+  <li>
+    <span [routerLink]="breadcrumbs[breadcrumbs.length - 2].url" routerLinkActive="router-link-active"
+      class="d-flex align-items-center cursor-pointer">
+
+    </span>
+  </li>
+  <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+    <span [routerLink]="'/home'+breadcrumb.url" routerLinkActive="router-link-active" class="d-flex align-items-center">
+      <div class="link-text" [ngClass]="{'active-link': i == breadcrumbs.length - 1}"> {{ breadcrumb.label |translate }}
+      </div>
+      <span *ngIf="i != breadcrumbs.length - 1" class="material-icons link-arrow">
+        navigate_next
+      </span>
+    </span>
+  </li>
+</ol>

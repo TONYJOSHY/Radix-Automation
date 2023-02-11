@@ -1,0 +1,82 @@
+/* variables for app */
+:root {
+  /* Primary color for app (used by bootstrap classes) */
+  --primary: #0f48aa;
+  --secondary: #032b71;
+  --tertiary: #ebf6ff;
+  --light: #f9fafc;
+  --danger: #e31c3d;
+  --success: #4aa564;
+  --dark: #3a3a3a;
+  --info: #4a4a4a;
+  --warning: #f59200;
+
+  /* Other custom colors for project */
+  --font-color: #212121;
+  --font-color-2: #f9fafc;
+  --font-color-3: #2a2a2a;
+  --font-color-primary: #40180a;
+  --font-color-secondary: #263129;
+  --label-field: #4a4a4a;
+  --sea-green: #01a747; /* secondary-green */
+  --grey1: #e0e0e0;
+  --background1: #e0e0e0;
+  --background2: #f5f9f6;
+  --font2: #4a4a4a;
+  --grey4: #f5f5f5;
+
+  --btn-focus: #2e773d;
+  --btn-hover: #318e45;
+
+  --emerald: #65ca81; /* input-field-active-border */
+  --tea-green: #a7e0b7; /* border-1 */
+  --spring-rain: #abceb3; /* input-field-default-border */
+  --frostee: #ebf6ff; /* nav-color */
+  --gin: #eaf3ec; /* background & border-2 */
+  --side-bar: #f5f9f6;
+  --gray-1: #e0e0e0;
+  --gray-2: #e8e8e8;
+  --gray-3: #f1f8f2;
+  --white: #ffffff;
+  --alert: #e44258;
+  --suspended: #d7a91f;
+  --orange: #fe7700;
+  --cancelled: #f87979;
+
+  --bay-leaf: #82b68c;
+  --silver: #c7c7c7;
+
+  --athens-gray: #e6e9ef;
+
+  --dolphin: #676879;
+  --light-blue: #6394f6;
+
+  /* Font size for app - colors */
+  --size-regular: 1.6rem;
+  --size-medium: 1.8rem;
+  --size-large: 2rem;
+  --size-xlarge: 2.4rem;
+  --size-xxlarge: 2.7rem;
+  --size-xxxlarge: 3.5rem;
+
+  --size-xxsmall: 1rem;
+  --size-xsmall: 1.2rem;
+  --size-small: 1.4rem;
+
+  /* bootstrap variables */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  --border-color-dark: #808080;
+}
+
+/* For padding , margins , border , text styles , floats etc use bootstrap classes
+Documentation of all utility class available at https://getbootstrap.com/docs/4.4/utilities/borders/ */

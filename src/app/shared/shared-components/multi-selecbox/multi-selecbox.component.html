@@ -1,0 +1,51 @@
+<div class="cursor-pointer form-input d-flex" (click)="isOpen = !isOpen;" cdkOverlayOrigin
+	#triggerNotif="cdkOverlayOrigin" #input>
+	<span class="w-100 text-placeholder-2" *ngIf="selectedList.length == 0">Select {{label}}</span>
+	<span class="w-100 text-truncate" *ngIf="selectedList.length != 0">
+		<span>
+			<span class="text-placeholder mx-2" *ngFor="let item of selectedList, let i=index">
+				<span *ngIf="i<3" class="selected">
+					<span>{{item[nameField]}}</span>
+					<img id="item-close" src="assets/images/icons/Close.svg" alt=""
+						(click)="updateAllSelected(item, true);$event.stopPropagation();">
+				</span>
+			</span>
+			<span class="diffrence" *ngIf="selectedList.length>3 && !isSmallScreen">&{{' '+ (selectedList.length-3)}}
+				more</span>
+			<span class="diffrence" *ngIf="isSmallScreen && selectedList.length>1">&{{' '+(selectedList.length-1)}}
+				more</span>
+		</span>
+	</span>
+	<span>
+		<mat-icon class="select-arrow">
+			expand_more
+		</mat-icon>
+	</span>
+</div>
+
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="triggerNotif" [cdkConnectedOverlayOpen]="isOpen"
+	[cdkConnectedOverlayHasBackdrop]="true" [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
+	(backdropClick)="isOpen = false; emitSelectionData()">
+	<div class="box-style" [style.width]="input.offsetWidth + 'px'">
+
+		<!-- search -->
+		<div class="pb-3">
+			<app-searchbox [placeholder]="'Search'" (searchEvent)=filter($event)></app-searchbox>
+		</div>
+		<!-- /search -->
+
+		<div class="body-scroll">
+			<div class="row m-0">
+				<div class="col-12 col-md-6" *ngFor="let item of searchList">
+					<mat-checkbox [checked]="selectedIds.includes(item?.id)" color="primary"
+						(change)="updateAllSelected(item,selectedIds.includes(item?.id))">
+						<span class="text-dark font-15px fw-500" *ngIf="!isAppend"> {{item[nameField]|titlecase}}
+						</span>
+						<span class="text-dark font-15px fw-500" *ngIf="isAppend">
+							{{item[nameField]+"-"+(item[AppendnameField]|titlecase)}} </span>
+					</mat-checkbox>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-template>

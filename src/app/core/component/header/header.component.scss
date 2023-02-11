@@ -1,0 +1,294 @@
+.header-div {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  // background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 101;
+}
+
+.sidenav-toggle {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  border-radius: 0.25rem !important;
+  font-size: var(--text-lg);
+}
+
+.user-menu ::ng-deep button {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.navbar {
+  // background: #ffffff !important;
+  // box-shadow: 0px 4px 0.5rem rgba(207, 216, 230, 0.3) !important;
+  border-bottom: 3px solid var(--primary) !important;
+}
+
+.company-select {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 6px 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.company-select ::ng-deep .mat-select {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.company-select ::ng-deep .mat-select-value {
+  min-width: max-content !important;
+  color: var(--font-color) !important;
+  font-size: 15px;
+  padding-right: 15px;
+  max-width: 300px;
+}
+
+.company-select ::ng-deep .mat-select-arrow {
+  margin-top: 0px !important;
+  position: relative;
+  top: -1px;
+}
+
+.mark-all-text {
+  font-size: 14px !important;
+  color: var(--font-color-2) !important;
+  font-weight: bold !important;
+}
+
+.flex-center-end {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.notifications-header {
+  height: 48px !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  display: flex !important;
+  flex: 1;
+  flex-direction: row !important;
+  padding: 0px 25px !important;
+}
+
+::ng-deep .notifications-menu.mat-menu-panel {
+  min-width: 500px !important;
+  max-width: auto !important;
+}
+
+::ng-deep .notifications-menu .mat-menu-content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.bt-grey {
+  border-top: 1px solid var(--border-color) !important;
+  height: 48px !important;
+}
+
+.view-all {
+  font-size: 14px !important;
+  color: var(--primary) !important;
+  font-weight: bold !important;
+}
+
+.notification-entity-list .entity-img {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 50% !important;
+  height: 45px !important;
+  width: 45px !important;
+  object-fit: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-entity-list .unseen-indicator {
+  background: var(--trinidad);
+  border-radius: 36px;
+  min-width: 20px;
+  height: 20px;
+  padding: 1px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: white !important;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+
+.notification-entity-list {
+  width: 500px !important;
+  overflow-x: auto !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.notification-entity-list .no-notifications {
+  height: 100px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-entity-list .entity-div {
+  position: relative;
+  max-width: 50px !important;
+}
+
+.notification-entity-list .entity-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-entity-list .entity-name {
+  font-weight: bold;
+  font-size: 9px;
+  color: var(--primary) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0px !important;
+  text-align: center;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: row;
+  padding: 17px 25px !important;
+  cursor: pointer !important;
+}
+
+.notifications .entity-image {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-color) !important;
+  box-sizing: border-box;
+  border-radius: 83px;
+  object-fit: cover !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px !important;
+}
+
+.user-img {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 83px;
+  object-fit: cover !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo {
+  height: 3rem !important;
+  width: 11.5rem !important;
+  margin-left: auto;
+  margin-right: auto;
+  // object-fit: contain !important;
+  display: block;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: contents !important;
+    flex-basis: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-logo {
+    height: 3rem !important;
+    width: 11.5rem !important;
+    object-fit: contain !important;
+    display: block;
+    margin-left: 45%;
+    margin-right: auto;
+  }
+}
+.user-dropdown {
+  border: 1px solid #e0e0e0 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  height: 3.6rem !important;
+  width: 23.5rem !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // text-align: center;
+}
+.cb-dropdown {
+  border: 1px solid #e0e0e0 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  height: 3.6rem !important;
+  width: 16rem !important;
+  // text-align: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.language-dropdown {
+  border: 1px solid #e0e0e0 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  height: 2.3rem !important;
+  width: 7rem !important;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.img-select {
+  // border-radius: 20px;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1.5rem !important;
+  margin-right: 0.5rem !important;
+}
+.img-flag {
+  padding-left: 0.5rem !important;
+  //padding-right:0.5rem !important;
+}
+
+#lang ::ng-deep .mat-select-arrow {
+  color: var(--primary) !important;
+}
+#select ::ng-deep.mat-select-value {
+  display: table-cell;
+  max-width: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 0.8rem;
+}
+
+.language-btn {
+  min-width: 10rem !important;
+}
+
+.hide-img {
+  margin-top: -1.5px;
+}
+.hide-cont {
+  margin-top: -1.5px;
+}

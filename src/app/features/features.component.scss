@@ -1,0 +1,26 @@
+.main-content {
+  position: relative;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0rem 0rem !important;
+  // background-color: white !important;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: 0px;
+    // width: 100vw;
+  }
+}
+
+@media (min-width: 993px) {
+  .small-sidenav {
+    margin-left: 80px;
+  }
+
+  .large-sidenav {
+    margin-left: 250px;
+  }
+}

@@ -1,0 +1,58 @@
+<nav id="header" class="navbar navbar-expand-lg fixed-top px-4 py-3 header-div">
+
+    <button class="sidenav-toggle" type="button" (click)="toggleSidebar()">
+        <img src="assets/images/sidebartogglebutton.svg" alt="">
+    </button>
+
+    <p class="header-logo"> Radix Automation </p>
+
+    <!-- <img class="header-logo" src="./assets/images/logo.png" alt=""> -->
+
+    <!-- <div class="collapse navbar-collapse">
+        <div class="ml-auto">
+            <div class="ml-auto user-menu">
+                <div class="d-flex flex-center flex-row">
+                    <div class="language-btn mr-3">
+                        <app-language-selector></app-language-selector>
+                    </div>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <a *ngIf="!userData" href="javascript:void(0)"
+                            class="nav-link font-1-bold d-flex align-items-center p-0" ngbDropdownToggle>
+                            <img class="user-img mr-2" src="./assets/images/user_icon.svg" alt="">
+                            <span class="body-text mr-2">Super Bio</span>
+                            <mat-icon class="text-font1">expand_more</mat-icon>
+                        </a>
+                        <a *ngIf="userData" href="javascript:void(0)"
+                            class="nav-link font-1-bold d-flex align-items-center p-0" ngbDropdownToggle>
+                            <img class="user-img mr-2"
+                                [src]="userData.image? userData.image : './assets/images/user_icon.svg'" alt="">
+                            <span class="body-text mr-2">{{userData?.session_data?.name}}</span>
+                            <mat-icon class="text-font1">expand_more</mat-icon>
+                        </a>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="navigateToProfile()">{{ 'My profile' }}</button>
+                        <button mat-menu-item (click)="logout()">{{ 'Log Out' }}</button>
+                    </mat-menu>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <button class="navbar-toggler" type="button" [matMenuTriggerFor]="menu">
+        <a *ngIf="!userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
+            ngbDropdownToggle>
+            <img class="user-img mr-2 hide-img" src="./assets/images/user_icon.svg" alt="">
+            <span class="body-text mr-2 hide-cont d-none d-sm-block">Super Bio</span>
+            <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
+        </a>
+        <a *ngIf="userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
+            ngbDropdownToggle>
+            <img class="user-img mr-2 hide-img "
+                [src]="userData.image? userData.image : './assets/images/user_icon.svg'" alt="">
+            <span class="body-text mr-2 hide-cont d-none d-sm-block">{{userData?.session_data?.name}}</span>
+            <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
+        </a>
+    </button> -->
+</nav>

@@ -1,0 +1,9 @@
+<div class="border-language">
+    <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="languageChanged()" disableOptionCentering panelClass="dynamic-class">
+        <ng-container *ngFor="let language of languageList">
+            <mat-option [value]="language.code">
+                <span class="text-blue">{{ language.name}}</span>
+            </mat-option>
+        </ng-container>
+    </mat-select>
+</div>

@@ -1,0 +1,14 @@
+.border-language {
+    min-width: 80px !important;
+    border: 1px solid #EBF1FF !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 3px 0px 3px 8px !important;
+    display: flex;
+    align-items: center;
+    margin-left: auto !important;
+}
+
+::ng-deep .dynamic-class {
+    margin-top: 30px;
+}

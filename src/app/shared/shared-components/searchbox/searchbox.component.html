@@ -1,0 +1,8 @@
+<div class="search-box align-items-center" [ngClass]="{ 'focus-border': focus == true,'dark-theme':isDark }">
+    <div class="py-1 px-2">
+      <!-- <img class="" src="assets/images/search2.png" alt=""> -->
+      <mat-icon class="material-icons search-icon mt-2 curser-pointer" (click)="searchInput.focus();">search</mat-icon>
+    </div>
+    <input type="text" placeholder="{{placeholder}}" (focus)="focus = true" (focusout)="focus = false"
+    (ngModelChange)="search()" [(ngModel)]="searchTerm" #searchInput class="dark-theme" [ngClass]="{'dark-theme': isDark}">
+  </div>

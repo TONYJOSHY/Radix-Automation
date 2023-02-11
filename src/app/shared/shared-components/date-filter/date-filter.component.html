@@ -1,0 +1,6 @@
+<mat-form-field id="datepicker" appearance="fill" class="custom-filter min-max-18">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="date" placeholder="{{placeholder}}" (click)="picker.open()" (ngModelChange)="dateChange($event)" [(ngModel)]="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <img src="assets/images/icons/Close.svg" class="curser-pointer" id="date-clear" alt="" *ngIf="date != ''" (click)="clearDate()">
+ </mat-form-field>
