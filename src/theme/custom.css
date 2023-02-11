@@ -45,6 +45,11 @@
   max-height: 50rem;
 }
 
+.select-box-width{
+  max-width: 10rem;
+  width: 100%;
+}
+
 /* @font-face {
   font-family: 'NotoSans Regular';
   src: url('/assets/fonts/NotoSans-Regular.ttf');

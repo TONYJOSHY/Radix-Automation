@@ -14,7 +14,7 @@ export class UtilityService {
     { id: '5', name: 'This year' }
   ];
 
-  cssVariables = {};
+  cssVariables: any = {};
 
   constructor() {
     this.getCssVariables()

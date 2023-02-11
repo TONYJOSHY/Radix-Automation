@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-production',
@@ -21,7 +22,7 @@ export class ProductionComponent implements OnInit {
       position: 'top',
       align: 'end',
       labels: {
-        color: '#0f48aa',
+        color: this.utilityService.cssVariables.primary || '#0f48aa',
         fontSize: 14,
         boxWidth: 15,
         boxHeight: 15,
@@ -32,13 +33,13 @@ export class ProductionComponent implements OnInit {
         // barThickness: 30,
         // maxBarThickness: 30,
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
       }],
       yAxes: [{
         display: true,
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
           beginAtZero: true,
@@ -56,7 +57,7 @@ export class ProductionComponent implements OnInit {
     },
     tooltips: {
       displayColors: false,
-      backgroundColor: '#060606',
+      backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
         title: function(tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']] + ' - ' + data['datasets'][tooltipItem[0]['datasetIndex']]['label'];
@@ -76,8 +77,8 @@ export class ProductionComponent implements OnInit {
 
   public barChartLabels: Label[] = [ '1', '2', '3', '4', '5' ];
   public barChartColors = [
-    { backgroundColor: '#e31c3d' },
-    { backgroundColor: '#4aa564' },
+    { backgroundColor: this.utilityService.cssVariables.danger || '#e31c3d' },
+    { backgroundColor: this.utilityService.cssVariables.success || '#4aa564' },
   ]
 
   public barChartData: ChartDataSets[] = [
@@ -94,7 +95,7 @@ export class ProductionComponent implements OnInit {
   }];
 
 
-  constructor() { }
+  constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
   }

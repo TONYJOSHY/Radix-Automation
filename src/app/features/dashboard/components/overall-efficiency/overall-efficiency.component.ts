@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-overall-efficiency',
@@ -12,7 +13,12 @@ export class OverallEfficiencyComponent implements OnInit {
   public doughnutChartData = [
     {
       data: [ 30, 20, 40 ],
-      backgroundColor: [ '#0f48aa', '#6FCF97', '#FFA3A3' ],
+      backgroundColor: [
+        this.utilityService.cssVariables.primary || '#0f48aa',
+        this.utilityService.cssVariables.warning || '#f59200',
+        this.utilityService.cssVariables.success || '#4aa564',
+        // this.utilityService.cssVariables.cancelled || '#f87979'
+      ],
     }
   ]
   public doughnutChartType: ChartType = 'doughnut';
@@ -44,7 +50,7 @@ export class OverallEfficiencyComponent implements OnInit {
     },
     tooltips: {
       displayColors: false,
-      backgroundColor: '#060606',
+      backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
         title: function(tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
@@ -78,7 +84,7 @@ export class OverallEfficiencyComponent implements OnInit {
   }];
 
 
-  constructor() { }
+  constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
   }

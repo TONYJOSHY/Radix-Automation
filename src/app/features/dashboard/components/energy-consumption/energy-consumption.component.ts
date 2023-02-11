@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-energy-consumption',
@@ -35,13 +36,13 @@ export class EnergyConsumptionComponent implements OnInit {
     scales: {
       xAxes: [{
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
       }],
       yAxes: [{
         display: true,
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
             beginAtZero: true,
@@ -52,7 +53,7 @@ export class EnergyConsumptionComponent implements OnInit {
     },
     tooltips: {
       displayColors: false,
-      backgroundColor: '#060606',
+      backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
         title: function(tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
@@ -67,14 +68,14 @@ export class EnergyConsumptionComponent implements OnInit {
         {
           type: 'line',
           scaleID: 'x',
-          value: 'March',
-          borderColor: 'orange',
+          // value: 'March',
+          // borderColor: 'orange',
           borderWidth: 2,
           label: {
             display: true,
             position: 'center',
-            color: 'orange',
-            content: 'LineAnno',
+            // color: 'orange',
+            // content: 'LineAnno',
             font: {
               weight: 'bold'
             }
@@ -91,28 +92,28 @@ export class EnergyConsumptionComponent implements OnInit {
     {
       data: [ 10, 20, 15, 10, 25, 20 ],
       label: 'Energy Consumed',
-      backgroundColor: '#e31c3d',
-      borderColor: '#e31c3d',
-      pointBackgroundColor: '#e31c3d',
-      pointBorderColor: '#e31c3d',
-      pointHoverBackgroundColor: '#e31c3d',
-      pointHoverBorderColor: '#e31c3d',
+      backgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      borderColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      pointBackgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      pointBorderColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      pointHoverBackgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      pointHoverBorderColor: this.utilityService.cssVariables.danger || '#e31c3d',
       fill: false,
     },
     {
       data: [ 5, 7, 10, 4, 15, 10 ],
       label: 'Solar Production',
-      backgroundColor: '#4aa564',
-      borderColor: '#4aa564',
-      pointBackgroundColor: '#4aa564',
-      pointBorderColor: '#4aa564',
-      pointHoverBackgroundColor: '#4aa564',
-      pointHoverBorderColor: '#4aa564',
+      backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      borderColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointBackgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointBorderColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointHoverBackgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointHoverBorderColor: this.utilityService.cssVariables.success || '#4aa564',
       fill: false,
     }
   ]
 
-  constructor() { }
+  constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
   }

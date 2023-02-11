@@ -1,17 +1,13 @@
 <div class="row mx-0 h-100">
   <div class="p-4 div-border h-100 w-100">
-    <div class="col-12">
-      <div class="row mx-0">
-        <div class="col-8">
-          <p class="text-lg text-light"> <b> Water Management </b> </p>
-        </div>
-        <div class="col-4">
-          <app-selectbox
-            [options]="utilityService.calenderFilter"
-            [nameField]="'name'"
-            [defaultOptionId]="''">
-          </app-selectbox>
-        </div>
+    <div class="col-12 d-flex align-items-center justify-content-between">
+      <p class="text-lg text-light"> <b> Water Management </b> </p>
+      <div class="select-box-width">
+        <app-selectbox
+          [options]="utilityService.calenderFilter"
+          [nameField]="'name'"
+          [defaultOptionId]="''">
+        </app-selectbox>
       </div>
     </div>
     <div class="col-12 d-flex align-items-center justify-content-between mb-3">
