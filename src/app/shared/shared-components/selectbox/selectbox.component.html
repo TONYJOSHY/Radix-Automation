@@ -1,53 +1,26 @@
 <form>
   <div class="position-relative ">
-
-    <mat-select #mySelect [(value)]="selected" (openedChange)="clearSearch()" (selectionChange)="change()"
-      class="custom-filter " [ngClass]="{}" [disableOptionCentering]="true" panelClass="filterPanelClass"
-      [placeholder]="'Select '+ placeholder" msInfiniteScroll (infiniteScroll)="getNextBatch()" threshold="'15%'"
-      [ngClass]="{ 'focus-border' : focus == true, 'placeholder-style': selected?.id === '' && applyPlaceholderStyle, 'ht-30px' : isSmall,shadowborder2:isShadowborder }"
-      [matTooltipDisabled]="hidetooltip" [matTooltip]="selected[nameField || '']">
-      <div class="drop-down-body" [ngClass]="{'drop-down-body-w-arrow': !hideBodyArrow}">
-        <div class="px-3 pt-3" [hidden]="hideSearch">
-          <div class="search-box " [ngClass]="{ 'focus-border' : focus == true }">
-            <mat-icon class="material-icons" [inline]="true">search</mat-icon>
-            <input type="text" placeholder="Search" aria-label="Number" autofocus [formControl]="myControl"
-              (focus)="focus = true" (focusout)="focus = false" (keydown)="$event.stopPropagation()">
-          </div>
-          <hr>
-        </div>
-        <div class="options-scroll" *ngIf="type==1" [ngClass]="{ 'mt-3': hideSearch == true }">
-          <mat-option id="filter-option" class="option-hover" *ngFor="let option of filteredOptions | async;"
-            [value]="option" (keydown)="$event.stopPropagation()">
+    <mat-select #mySelect
+      class="custom-filter"
+      panelClass="filterPanelClass"
+      [(value)]="selected"
+      (openedChange)="clearSearch()"
+      (selectionChange)="change()"
+      [disableOptionCentering]="true"
+      [ngClass]="{ 'focus-border' : focus == true }" >
+      <div class="drop-down-body" >
+        <div class="options-scroll" >
+          <mat-option id="filter-option" class="option-hover"
+            *ngFor="let option of filteredOptions | async;"
+            [value]="option"
+            (keydown)="$event.stopPropagation()">
             {{option[nameField]}}
-
-          </mat-option>
-        </div>
-
-        <div class="options-scroll" *ngIf="type==2" [ngClass]="{ 'mt-3': hideSearch == true }">
-          <mat-option id="filter-option-2" class="option-hover" *ngFor="let option of filteredOptions | async;"
-            [value]="option" (keydown)="$event.stopPropagation()">
-            <!-- <span><mat-icon matListIcon>fiber_manual_record</mat-icon></span> -->
-            <ul>
-              <li class="font-medium">{{option[nameField]}}</li>
-            </ul>
-
-          </mat-option>
-          <mat-option disabled *ngIf="options.length==0 && isSelected">
-            <span class="font-medium">No subcategories found!!</span>
-          </mat-option>
-          <mat-option disabled *ngIf="options.length==0 && !isSelected">
-            <span class="font-medium">Please choose a category</span>
           </mat-option>
         </div>
       </div>
     </mat-select>
 
-    <i class="material-icons dropdown-icon curser-pointer" (click)="mySelect.toggle()"
-      [ngClass]="{'dropdown-icon-sm': isSmall}">keyboard_arrow_down</i>
-    <!-- <img height="6" class="dropdown-icon" [ngClass]="{'dropdown-icon-sm': isSmall}" src="assets/images/dropdown.svg" alt=""> -->
-    <div *ngIf="hasLabel" (click)="mySelect.toggle()" class="filter-label" [ngClass]="{'filter-label-sm': isSmall}">
-
-      {{label}}: <span class="ellipsis">{{ selected[nameField || '']}}</span>
-    </div>
+    <i class="material-icons curser-pointer dropdown-icon-sm"
+      (click)="mySelect.toggle()" >keyboard_arrow_down</i>
   </div>
 </form>
