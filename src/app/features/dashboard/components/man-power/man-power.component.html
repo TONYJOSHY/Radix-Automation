@@ -7,8 +7,15 @@
       <p class="mb-0 text-sm text-success"> 1000 Units </p>
       <p class="mb-0 text-sm text-danger"> 10% </p>
     </div>
-    <div class="col-12">
-
+    <!-- dougnut chart -->
+    <div class="col-12 d-flex justify-content-center align-items-center max-height">
+      <canvas baseChart
+        [datasets]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [options]="chartOptions"
+        [chartType]="doughnutChartType"
+        [plugins]="doughnutChartPlugins">
+      </canvas>
     </div>
   </div>
 </div>

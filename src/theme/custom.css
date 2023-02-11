@@ -41,6 +41,10 @@
   border-radius: 0.5rem;
 }
 
+.max-height{
+  max-height: 50rem;
+}
+
 /* @font-face {
   font-family: 'NotoSans Regular';
   src: url('/assets/fonts/NotoSans-Regular.ttf');
@@ -278,10 +282,6 @@
 
 .ct-table .mat-header-cell {
   color: #4a4a4a !important;
-}
-
-.ct-table table tbody {
-  /* border: 0.2rem solid var(--border-color) !important; */
 }
 
 .ct-table thead th {

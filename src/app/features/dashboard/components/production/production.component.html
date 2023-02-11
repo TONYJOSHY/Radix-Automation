@@ -1,5 +1,5 @@
-<div class="row mx-0">
-  <div class="p-4 div-border w-100">
+<div class="row mx-0 h-100 max-height">
+  <div class="p-4 div-border w-100 h-100">
     <div class="col-12">
       <p class="text-lg text-light"> <b> Production </b> </p>
     </div>
@@ -7,8 +7,16 @@
       <p class="mb-0 text-sm text-success"> 1000 Units </p>
       <p class="mb-0 text-sm text-danger"> 10% </p>
     </div>
-    <div class="col-12">
-
+    <!-- two bar chart -->
+    <div class="col-12 d-flex justify-content-center align-items-center max-height">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [options]="barChartOptions"
+        [labels]="barChartLabels"
+        [chartType]="barChartType"
+        [colors]="barChartColors"
+        [plugins]="barChartPlugins">
+      </canvas>
     </div>
   </div>
 </div>

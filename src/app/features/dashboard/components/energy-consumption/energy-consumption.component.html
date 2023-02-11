@@ -3,12 +3,18 @@
     <div class="col-12">
       <p class="text-lg text-light"> <b> Energy Consumption </b> </p>
     </div>
-    <div class="col-12 d-flex align-items-center justify-content-between">
+    <div class="col-12 d-flex align-items-center justify-content-between mb-4">
       <p class="mb-0 text-sm text-success"> 5000 KWh </p>
       <p class="mb-0 text-sm text-danger"> 10% </p>
     </div>
-    <div class="col-12">
-
+    <!-- Line cahrt -->
+    <div class="col-12 d-flex justify-content-center align-items-center max-height">
+      <canvas baseChart
+        [labels]="lineChartLabel"
+        [datasets]="lineChartData"
+        [options]="lineChartOptions"
+        [chartType]="lineChartType">
+      </canvas>
     </div>
   </div>
 </div>
