@@ -31,6 +31,7 @@ export class OverallEfficiencyComponent implements OnInit {
     aspectRatio: 1,
     maintainAspectRatio: false,
     cutoutPercentage: 60,
+    circumference: 1.8 * Math.PI,
     // spacing: 0,
     // hoverOffset: 20,
     // borderJoinStyle: '',

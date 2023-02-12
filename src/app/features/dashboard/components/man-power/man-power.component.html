@@ -15,7 +15,7 @@
       <p class="mb-0 text-sm text-danger"> 10% </p>
     </div>
     <!-- dougnut chart -->
-    <div class="col-12 d-flex justify-content-center align-items-center max-height">
+    <div class="col-12 d-flex justify-content-center align-items-center max-height position-relative">
       <canvas baseChart
         [datasets]="doughnutChartData"
         [labels]="doughnutChartLabels"
@@ -23,6 +23,7 @@
         [chartType]="doughnutChartType"
         [plugins]="doughnutChartPlugins">
       </canvas>
+      <p class="mb-0 text-xxxl text-success percent-position"> 90% </p>
     </div>
   </div>
 </div>

@@ -32,6 +32,7 @@ export class ProductionComponent implements OnInit {
       xAxes: [{
         // barThickness: 30,
         // maxBarThickness: 30,
+        text: 'Production (Units)',
         gridLines: {
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
