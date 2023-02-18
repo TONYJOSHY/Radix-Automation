@@ -27,7 +27,7 @@
   vertical-align: middle !important;
   padding-left: 10px;
   font-weight: 400 !important;
-  font-size: 15px !important;
+  font-size: var(--size-small) !important;
 }
 
 ::ng-deep .custom-filter .mat-select-arrow {

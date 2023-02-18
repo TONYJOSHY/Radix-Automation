@@ -1,25 +1,21 @@
 <div class="row mx-0 h-100">
   <div class="p-4 div-border w-100">
     <div class="col-12 d-flex align-items-center justify-content-between">
-      <p class="text-lg text-light"> <b> Energy Consumption </b> </p>
+      <p class="text-m text-light"> <b> Energy Consumption </b> </p>
       <div class="select-box-width">
-        <app-selectbox
-          [options]="utilityService.calenderFilter"
-          [nameField]="'name'"
-          [defaultOptionId]="''">
+        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''">
         </app-selectbox>
       </div>
     </div>
-    <div class="col-12 d-flex align-items-center justify-content-between mb-4">
-      <p class="mb-0 text-sm text-success"> 5000 KWh </p>
-      <p class="mb-0 text-sm text-danger"> 10% </p>
+    <div class="col-12 text-center mb-4">
+      <p class="mb-2 text-xl text-success"> <b> 5000 KWh </b> </p>
+      <p class="text-sm text-danger d-flex align-items-center justify-content-center"> 10%
+        <mat-icon class="icon-size"> south </mat-icon>
+      </p>
     </div>
     <!-- Line cahrt -->
     <div class="col-12 d-flex justify-content-center align-items-center max-height">
-      <canvas baseChart
-        [labels]="lineChartLabel"
-        [datasets]="lineChartData"
-        [options]="lineChartOptions"
+      <canvas baseChart [labels]="lineChartLabel" [datasets]="lineChartData" [options]="lineChartOptions"
         [chartType]="lineChartType">
       </canvas>
     </div>

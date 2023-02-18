@@ -3,25 +3,23 @@
     font-size: var(--size-xsmall);
     color: var(--label-field);
   }
-  
-  
-  
+
   .coordinator-image {
     position: absolute;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 25px;
     cursor: pointer;
   }
-  
+
   .coordinator-image:hover {
     height: 30px;
     z-index: 2;
   }
-  
+
   .underline {
     text-decoration: underline;
   }
-  
+
   .with-border {
     background: var(--theme);
     // border: 1px solid #EFEFEF;
@@ -34,49 +32,48 @@
     // overflow: hidden;
     // text-overflow: ellipsis;
   }
-  
+
   .status-box {
     border-radius: 4px;
     display: flex;
   }
   .status-box-error{
-    color: #F5785D;
-    background: #FCE0CC;
+    color: var(--alert);
+    background: var(--warning);
   }
   .status-box-success {
-    background: #DCFCCC;
-    color: #379D8B;
+    background: var(--tea-green);
+    color: var(--success);
   }
   .status-box-warning{
-    background: #FCFACC;
-    color: #EDA700;
+    background: var(--suspended);
+    color: var(--warning);
   }
-  
+
   // .ellipsis {
-  
+
   //   //Ellipsis
   //   width: calc(100%);
   //   overflow: hidden;
   //   white-space: nowrap;
   //   text-overflow: ellipsis;
   // }
-  
+
   .rounded-status {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #FF5252;
+    background: var(--danger);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: var(--white);
   }
-  
+
   .rounded-status-success {
-    background: #1AD083;
+    background:var(--success);
   }
-  
+
   .card1 {
-    background: #D3F0DB;
+    background: var(--spring-rain);
   }
-  

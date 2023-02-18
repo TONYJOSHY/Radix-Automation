@@ -11,7 +11,7 @@
 
 
   .focus-border {
-    border: 1px solid #1AD083 !important;
+    border: 1px solid var(--success) !important;
   }
 
   .search-box input {
@@ -20,34 +20,34 @@
     outline: none !important;
     box-shadow: none !important;
     font-weight: 400;
-    font-size: 15px;
+    font-size: var(--size-small);
     color: var(--secondary);
     background: var(--theme);
   }
   .search-box .dark-theme input {
-    background-color: #151515 !important;
-    color: #bbbbbb !important;
+    background-color: var(--font-color) !important;
+    color: var(--grey1) !important;
   }
   ::-webkit-input-placeholder {
     /* Edge */
     font-weight: 400;
-    font-size: 15px;
-    color: #808080;
+    font-size: var(--size-small);
+    color: var(--info);
   }
 
   :-ms-input-placeholder {
     /* Internet Explorer */
     font-weight: 400;
-    font-size: 15px;
-    color: #808080;
+    font-size: var(--size-small);
+    color: var(--info);
   }
 
   ::placeholder {
     font-weight: 400;
-    font-size: 15px;
-    color: #808080;
+    font-size: var(--size-small);
+    color: var(--info);
   }
   .search-icon{
-  font-size: 20px;
-  color: #65CA81;
+  font-size: var(--size-large);
+  color: var(--success);
   }

@@ -337,8 +337,8 @@ input:-webkit-autofill:active {
 }
 
 .form-control-lg {
-  font-size: 1.4rem;
-  border: 1px solid #abceb3 !important;
+  font-size: var(--size-small);
+  border: 1px solid var(--emerald) !important;
 }
 
 .btn:focus {
@@ -801,18 +801,18 @@ input[type="date"] {
 .title-heading-xs {
   color: #4a4a4a;
   font-weight: bold;
-  font-size: 14px;
+  font-size: var(--size-small);
 }
 
 .title-heading-xxs {
   color: #4a4a4a;
   font-weight: 700;
-  font-size: 12px;
+  font-size: var(--size-xsmall);
 }
 
 .title-content-xs {
   color: #4a4a4a;
-  font-size: 14px;
+  font-size: var(--size-small);
 }
 
 .h-50px {
@@ -903,7 +903,7 @@ input[type="date"] {
 .font-semi-bold {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: var(--size-medium)
 }
 
 .add-new-chapter-btn {
@@ -964,16 +964,16 @@ input[type="date"] {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17) !important;
   border-radius: 4px !important;
   font-weight: 500 !important;
-  font-size: 12px !important;
-  color: #ffffff !important;
+  font-size: var(--size-xsmall) !important;
+  color: var(--white) !important;
 }
 
 .error-message {
-  background: red !important;
+  background: var(--danger) !important;
 }
 
 .warning-message {
-  background: orange !important;
+  background: var(--warning) !important;
 }
 
 // filter width styles

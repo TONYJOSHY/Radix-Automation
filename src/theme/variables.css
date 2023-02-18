@@ -12,9 +12,10 @@
   --warning: #f59200;
 
   /* Other custom colors for project */
-  --font-color: #212121;
+  /*  */
+  --font-color: #000000;
   --font-color-2: #f9fafc;
-  --font-color-3: #2a2a2a;
+  --font-color-3: #191c24;
   --font-color-primary: #40180a;
   --font-color-secondary: #263129;
   --label-field: #4a4a4a;

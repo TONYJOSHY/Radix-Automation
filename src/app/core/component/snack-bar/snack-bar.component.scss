@@ -1,9 +1,9 @@
 .icon-size{
     color: white !important;
-    font-size: 25px !important;
+    font-size: var(--size-xlarge) !important;
 }
 .msg{
-    font-size: 15px !important;
+    font-size: var(--size-small) !important;
 }
 .snack-container{
     width: auto;

@@ -1,14 +1,14 @@
 .box-style {
   height: auto;
-  background: #FFFFFF;
+  background: var(--white);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.11);
-  border: 1px solid #ECECEC;
+  border: 1px solid var(--gray-1);
   border-radius: 5px;
   padding: 19px 25px;
 }
 
 .border-btm {
-  border-bottom: 0.6px solid #E9E9E9;
+  border-bottom: 0.6px solid var(--gray-1);
 }
 
 .body-scroll {
@@ -18,7 +18,7 @@
 }
 
 .form-input {
-  background: #FFFFFF;
+  background: var(--white);
   border: 1px solid var(--spring-rain) !important;
   box-sizing: border-box;
   border-radius: 4px;
@@ -28,16 +28,15 @@
 
 .form-input-text {
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--size-small);
   line-height: 120%;
   letter-spacing: 0.2px;
-  color: #BABABA;
+  color: var(--gray-1);
 }
 
 .chip {
-  background: #F8F5FF;
-  ;
-  border: 1px solid #CFD8E6;
+  background: var(--light-blue);
+  border: 1px solid var(--dolphin);
   border-radius: 8px;
   height: 25px;
   display: flex;
@@ -64,19 +63,19 @@
 }
 
 .selected {
-  background: #EAF3EC;
-  color: black;
+  background: var(--emerald);
+  color: var(--font-color);
   text-align: center;
   padding: 5px;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: var(--size-xsmall);
   font-weight: 400;
 }
 
 .diffrence {
   color: var(--font-color-3);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: var(--size-xsmall);
 }
 
 #item-close {
@@ -92,7 +91,7 @@
 }
 
 .select-arrow{
-  color: var(--primary, #01A747);
+  color: var(--primary);
 }
 mat-checkbox ::ng-deep .mat-checkbox-inner-container {
   width: 15px !important;
