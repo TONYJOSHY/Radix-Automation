@@ -51,6 +51,10 @@
   width: 100%;
 }
 
+.opacity-50{
+  opacity: .5;
+}
+
 /* @font-face {
   font-family: 'NotoSans Regular';
   src: url('/assets/fonts/NotoSans-Regular.ttf');

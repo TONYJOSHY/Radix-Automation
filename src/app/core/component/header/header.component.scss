@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  // background-color: white;
+  background: var(--font-color-3) !important;
   border-bottom: 1px solid var(--border-color);
   z-index: 101;
 }

@@ -9,10 +9,10 @@ import { UtilityService } from 'src/app/shared/services/utility/utility.service'
 })
 export class OverallEfficiencyComponent implements OnInit {
 
-  public doughnutChartLabels: string[] = [ 'Production', 'Energy', 'Manhours' ];
+  public doughnutChartLabels: string[] = ['Production', 'Energy', 'Manhours'];
   public doughnutChartData = [
     {
-      data: [ 30, 20, 40 ],
+      data: [30, 20, 40],
       backgroundColor: [
         this.utilityService.cssVariables.primary || '#0f48aa',
         this.utilityService.cssVariables.warning || '#f59200',
@@ -53,10 +53,10 @@ export class OverallEfficiencyComponent implements OnInit {
       displayColors: false,
       backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
-        title: function(tooltipItem, data) {
+        title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
         },
-        label: function(tooltipItem, data) {
+        label: function (tooltipItem, data) {
           return data['datasets'][0]['data'][tooltipItem['index']] + ' %';
         },
       },

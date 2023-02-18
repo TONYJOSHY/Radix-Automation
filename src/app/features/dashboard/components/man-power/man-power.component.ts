@@ -9,15 +9,15 @@ import { UtilityService } from 'src/app/shared/services/utility/utility.service'
 })
 export class ManPowerComponent implements OnInit {
 
-  public doughnutChartLabels: string[] = [ 'Engineering', 'Technical', 'Sales', 'Administration' ];
+  public doughnutChartLabels: string[] = ['Engineering', 'Technitian', 'Sales', 'Administration'];
   public doughnutChartData = [
     {
-      data: [ 30, 20, 25, 15 ],
+      data: [30, 20, 25, 15],
       backgroundColor: [
-        this.utilityService.cssVariables.primary || '#0f48aa',
+        this.utilityService.cssVariables.secondary || '#0f48aa',
         this.utilityService.cssVariables.warning || '#f59200',
         this.utilityService.cssVariables.success || '#4aa564',
-        this.utilityService.cssVariables.cancelled || '#f87979'
+        this.utilityService.cssVariables.info || '#f87979'
       ],
     }
   ]
@@ -50,10 +50,10 @@ export class ManPowerComponent implements OnInit {
       displayColors: false,
       backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
-        title: function(tooltipItem, data) {
+        title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
         },
-        label: function(tooltipItem, data) {
+        label: function (tooltipItem, data) {
           return data['datasets'][0]['data'][tooltipItem['index']] + ' %';
         },
       },

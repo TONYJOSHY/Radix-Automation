@@ -48,9 +48,9 @@ export class WaterManagementComponent implements OnInit {
           zeroLineColor: '#FFFFFF'
         },
         ticks: {
-            beginAtZero: true,
-            // max: 100,
-            // min: 0
+          beginAtZero: true,
+          // max: 100,
+          // min: 0
         },
       }]
     },
@@ -60,11 +60,11 @@ export class WaterManagementComponent implements OnInit {
 
       // padding: 50,
       callbacks: {
-        title: function(tooltipItem, data) {
+        title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
         },
-        label: function(tooltipItem, data) {
-          return Math.round( data['datasets'][0]['data'][tooltipItem['index']] ) + ' %' ;
+        label: function (tooltipItem, data) {
+          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]) + ' %';
         },
       },
     },
@@ -91,29 +91,29 @@ export class WaterManagementComponent implements OnInit {
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = [ '1', '2', '3', '4', '5', '6' ]
+  public lineChartLabel: Label[] = ['1', '2', '3', '4', '5', '6']
 
-  public lineChartData: ChartDataSets[]  = [
+  public lineChartData: ChartDataSets[] = [
     {
-      data: [ 10, 20, 15, 10, 25, 20 ],
+      data: [10, 20, 15, 10, 25, 20],
       label: 'Water consumption',
-      backgroundColor: '#0f48aa',
-      borderColor: '#0f48aa',
-      pointBackgroundColor: '#0f48aa',
-      pointBorderColor: '#0f48aa',
-      pointHoverBackgroundColor: '#0f48aa',
-      pointHoverBorderColor: '#0f48aa',
+      backgroundColor: this.utilityService.cssVariables.info || '#0f48aa',
+      borderColor: this.utilityService.cssVariables.info || '#0f48aa',
+      pointBackgroundColor: this.utilityService.cssVariables.info || '#0f48aa',
+      pointBorderColor: this.utilityService.cssVariables.info || '#0f48aa',
+      pointHoverBackgroundColor: this.utilityService.cssVariables.info || '#0f48aa',
+      pointHoverBorderColor: this.utilityService.cssVariables.info || '#0f48aa',
       fill: false,
     },
     {
-      data: [ 5, 10, 12, 8, 7, 5 ],
+      data: [5, 10, 12, 8, 7, 5],
       label: 'Treated Water',
-      backgroundColor: '#4aa564',
-      borderColor: '#4aa564',
-      pointBackgroundColor: '#4aa564',
-      pointBorderColor: '#4aa564',
-      pointHoverBackgroundColor: '#4aa564',
-      pointHoverBorderColor: '#4aa564',
+      backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      borderColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointBackgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointBorderColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointHoverBackgroundColor: this.utilityService.cssVariables.success || '#4aa564',
+      pointHoverBorderColor: this.utilityService.cssVariables.success || '#4aa564',
       fill: false,
     }
   ]

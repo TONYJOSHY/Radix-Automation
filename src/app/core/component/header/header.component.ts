@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  toggle(){
+  toggle() {
     this.toggleSideBar.emit(this.isSidenavHide)
   }
 
@@ -100,6 +100,10 @@ export class HeaderComponent implements OnInit {
     //     this.loginWithUrl(res.data);
     //   }
     // })
+  }
+
+  moveTodashBoard() {
+    this.router.navigate(['dashboard'])
   }
 
 }

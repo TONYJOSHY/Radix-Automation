@@ -1,15 +1,15 @@
 /* variables for app */
 :root {
   /* Primary color for app (used by bootstrap classes) */
-  --primary: #0f48aa;
-  --secondary: #032b71;
+  --primary: #03458e;
+  --secondary: #0d6eff;
   --tertiary: #ebf6ff;
   --light: #f9fafc;
-  --danger: #e31c3d;
-  --success: #4aa564;
+  --danger: #FC424A;
+  --success: #00D25B;
   --dark: #3a3a3a;
-  --info: #4a4a4a;
-  --warning: #f59200;
+  --info: #8F5FE8;
+  --warning: #FFAB00;
 
   /* Other custom colors for project */
   /*  */
@@ -40,7 +40,7 @@
   --gray-3: #060606;
   --white: #ffffff;
   --alert: #e44258;
-  --suspended: #d7a91f;
+  --suspended: #E1C107;
   --orange: #fe7700;
   --cancelled: #f87979;
 
@@ -59,6 +59,7 @@
   --size-xlarge: 2.4rem;
   --size-xxlarge: 2.7rem;
   --size-xxxlarge: 3.5rem;
+  --size-vlarge:4.8rem;
 
   --size-xxsmall: 1rem;
   --size-xsmall: 1.2rem;

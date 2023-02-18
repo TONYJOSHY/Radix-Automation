@@ -1,11 +1,12 @@
 .custom-filter {
-  border: 1px solid var(--athens-gray);
+  border: 1px solid var(--secondary);
   box-sizing: border-box;
   border-radius: .6rem;
   height: 2.5rem;
   font-size: var(--size-small) !important;
   color: var(--primary) !important;
   font-weight: 500 !important;
+  opacity: .7;
 }
 
 ::ng-deep .filterPanelClass {

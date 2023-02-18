@@ -45,9 +45,9 @@ export class EnergyConsumptionComponent implements OnInit {
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
-            beginAtZero: true,
-            // max: 100,
-            // min: 0
+          beginAtZero: true,
+          // max: 100,
+          // min: 0
         },
       }]
     },
@@ -55,11 +55,11 @@ export class EnergyConsumptionComponent implements OnInit {
       displayColors: false,
       backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
-        title: function(tooltipItem, data) {
+        title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
         },
-        label: function(tooltipItem, data) {
-          return Math.round( data['datasets'][0]['data'][tooltipItem['index']] ) + ' %' ;
+        label: function (tooltipItem, data) {
+          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]) + ' %';
         },
       },
     },
@@ -86,22 +86,22 @@ export class EnergyConsumptionComponent implements OnInit {
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = [ '1', '2', '3', '4', '5', '6' ]
+  public lineChartLabel: Label[] = ['1', '2', '3', '4', '5', '6']
 
-  public lineChartData: ChartDataSets[]  = [
+  public lineChartData: ChartDataSets[] = [
     {
-      data: [ 10, 20, 15, 10, 25, 20 ],
+      data: [10, 20, 15, 10, 25, 20],
       label: 'Energy Consumed',
-      backgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
-      borderColor: this.utilityService.cssVariables.danger || '#e31c3d',
-      pointBackgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
-      pointBorderColor: this.utilityService.cssVariables.danger || '#e31c3d',
-      pointHoverBackgroundColor: this.utilityService.cssVariables.danger || '#e31c3d',
-      pointHoverBorderColor: this.utilityService.cssVariables.danger || '#e31c3d',
+      backgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d',
+      borderColor: this.utilityService.cssVariables.secondary || '#e31c3d',
+      pointBackgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d',
+      pointBorderColor: this.utilityService.cssVariables.secondary || '#e31c3d',
+      pointHoverBackgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d',
+      pointHoverBorderColor: this.utilityService.cssVariables.secondary || '#e31c3d',
       fill: false,
     },
     {
-      data: [ 5, 7, 10, 4, 15, 10 ],
+      data: [5, 7, 10, 4, 15, 10],
       label: 'Solar Production',
       backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
       borderColor: this.utilityService.cssVariables.success || '#4aa564',

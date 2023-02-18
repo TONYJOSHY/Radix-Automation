@@ -32,7 +32,6 @@ export class ProductionComponent implements OnInit {
       xAxes: [{
         // barThickness: 30,
         // maxBarThickness: 30,
-        text: 'Production (Units)',
         gridLines: {
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
@@ -45,11 +44,11 @@ export class ProductionComponent implements OnInit {
         ticks: {
           beginAtZero: true,
           min: 0,
-          callback: function(value, index, values) {
-            if(value){
+          callback: function (value, index, values) {
+            if (value) {
               const roundedNumber = value
-              if(roundedNumber.toString().length < 4) return value ;
-              else if(roundedNumber.toString().length < 7) return (value / 1000);
+              if (roundedNumber.toString().length < 4) return value;
+              else if (roundedNumber.toString().length < 7) return (value / 1000);
               else return (value / 1000000);
             }
           },
@@ -60,10 +59,10 @@ export class ProductionComponent implements OnInit {
       displayColors: false,
       backgroundColor: this.utilityService.cssVariables['gray-3'] || '#060606',
       callbacks: {
-        title: function(tooltipItem, data) {
+        title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']] + ' - ' + data['datasets'][tooltipItem[0]['datasetIndex']]['label'];
         },
-        label: function(tooltipItem, data) {
+        label: function (tooltipItem, data) {
           return data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']];
         },
       },
@@ -76,20 +75,20 @@ export class ProductionComponent implements OnInit {
 
   public barChartType: ChartType = 'bar';
 
-  public barChartLabels: Label[] = [ '1', '2', '3', '4', '5' ];
+  public barChartLabels: Label[] = ['1', '2', '3', '4', '5'];
   public barChartColors = [
-    { backgroundColor: this.utilityService.cssVariables.danger || '#e31c3d' },
+    { backgroundColor: this.utilityService.cssVariables.primary || '#e31c3d' },
     { backgroundColor: this.utilityService.cssVariables.success || '#4aa564' },
   ]
 
   public barChartData: ChartDataSets[] = [
-    { data: [ 30, 45, 60, 20, 30 ], label: 'Target Production' } ,
-    { data: [ 5, 10, 15, 10, 7 ], label: 'Actual Production' } ,
+    { data: [30, 45, 60, 20, 30], label: 'Target Production' },
+    { data: [5, 10, 15, 10, 7], label: 'Actual Production' },
   ]
 
   public barChartPlugins = [{
     beforeInit: function (chart) {
-      chart.legend.afterFit = function(){
+      chart.legend.afterFit = function () {
         this.height = this.height + 15;
       }
     }
