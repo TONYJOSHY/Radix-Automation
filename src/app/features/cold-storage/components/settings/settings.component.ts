@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  isEdit = false;
+
+  settingsForm: FormGroup = this.fb.group({
+    conveyor_speed: [60],
+    filler_speed: [1200],
+    temp_1_sv: [100],
+    temp_1_cv: [65],
+    conveyor: [true],
+    filler: [false],
+    temp_2_sv: [100],
+    temp_2_cv: [70],
+    on_delay_time: [1500],
+    off_delay_time: [250],
+  })
+
+  get settings() { return this.settingsForm.controls }
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  editMode(event) {
+    console.log(event)
   }
 
 }

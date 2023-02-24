@@ -16,13 +16,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { OverlayModule } from '@angular/cdk/overlay';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 const modules = [
   MatIconModule,
@@ -34,7 +35,7 @@ const modules = [
   MatSelectModule,
   MatCheckboxModule,
   MatDatepickerModule,
-  MatNativeDateModule ,
+  MatNativeDateModule,
   MatPaginatorModule,
   MatMenuModule,
   MatTableModule,
@@ -57,4 +58,4 @@ const modules = [
   imports: modules,
   exports: modules,
 })
-export class MaterialModule {}
+export class MaterialModule { }

@@ -70,6 +70,10 @@
   opacity: 1 !important;
 }
 
+.bg-btn-hover{
+  background-color: var(--btn-hover);
+}
+
 /* @font-face {
   font-family: 'NotoSans Regular';
   src: url('/assets/fonts/NotoSans-Regular.ttf');
