@@ -1,0 +1,21 @@
+.table-color{
+  color: var(--white);
+  // opacity: .5;
+}
+
+.table-border{
+  border-bottom: 1px solid var(--light);
+}
+
+.table-border2{
+  border-bottom: 1px solid var(--dark);
+}
+
+.table tbody{
+  max-height: 20rem;
+  overflow: scroll;
+}
+
+.table th{
+  border-top: none;
+}

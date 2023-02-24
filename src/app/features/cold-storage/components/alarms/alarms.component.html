@@ -1,0 +1,22 @@
+<div class="row mx-0 h-100">
+  <div class="p-4 div-border w-100">
+    <div class="col-12">
+      <p class="text-m text-light"> <b> Active Alarms </b> </p>
+    </div>
+    <div class="col-12 text-center mb-3">
+      <p class="mb-0 text-vl text-danger"> <b> 2 </b> </p>
+    </div>
+    <!-- Alarm History -->
+    <div class="col-12">
+      <div style="max-height: 20rem;overflow: scroll;min-height: 10rem;">
+        <div *ngFor="let x of [1, 2];let i = index">
+          <div class="d-flex w-100 justify-content-center table-color table-border2 py-3">
+            <p class="mb-0 text-sm text-warning" *ngIf="i == 0"> I-mark sensor error </p>
+            <p class="mb-0 text-sm text-warning" *ngIf="i == 1"> Main motor trip </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
