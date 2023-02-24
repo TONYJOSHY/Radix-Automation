@@ -1,10 +1,24 @@
-<div class="row p-5">
-  <div class="col-6">
+<div class="row mx-0 pt-5 px-4 ">
+  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+    <app-efficiency-chart></app-efficiency-chart>
+  </div>
+  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+    <app-count-bar-chart></app-count-bar-chart>
+  </div>
+  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+    <app-performance-tile></app-performance-tile>
+  </div>
+</div>
+<div class="row mx-0 pb-5 py-lg-5 px-4 set-height">
+  <div class="col-12 col-lg-4 mb-4">
+    <app-machine1 class="h-100"></app-machine1>
+  </div>
 
-    <mat-select (selectionChange)="emitValue($event)" panelClass="select-box">
-      <mat-option *ngFor="let item of calenderFilter"
-        [value]="item">{{ item.name }}</mat-option>
-    </mat-select>
+  <div class="col-12 col-lg-4 mb-4">
+    <app-machine2></app-machine2>
+  </div>
 
+  <div class="col-12 col-lg-4 mb-4">
+    <app-machine3></app-machine3>
   </div>
 </div>

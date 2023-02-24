@@ -1,5 +1,12 @@
 /* Image/icon sizes */
 
+.img-square-100{
+  width: 10rem !important;
+  height: 10rem !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .img-icon {
   width: 1.6rem !important;
   height: 1.6rem !important;
@@ -53,6 +60,10 @@
 
 .opacity-50{
   opacity: .5;
+}
+
+.opacity-90{
+  opacity: .9;
 }
 
 /* @font-face {

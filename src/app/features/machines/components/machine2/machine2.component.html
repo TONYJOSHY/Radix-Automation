@@ -1,0 +1,50 @@
+<div class="row mx-0 h-100">
+  <div class="p-4 div-border w-100">
+    <div class="col-12">
+      <p class="text-lg text-light"> <b> Machine 2 </b> </p>
+    </div>
+    <!-- doughnut chart -->
+    <div class="row justify-content-center align-items-center mx-0 mb-3">
+      <div class="col-6 d-flex justify-content-center align-items-center" style="max-height: 12rem !important;">
+        <canvas baseChart [datasets]="doughnutChartData" [labels]="doughnutChartLabels" [options]="chartOptions"
+          [chartType]="doughnutChartType" [plugins]="doughnutChartPlugins">
+        </canvas>
+        <p class="mb-0 text-lg text-danger percent-position"> 25% </p>
+      </div>
+      <div class="col-6">
+        <img src="/assets/images/machine/machine_2.jpg" alt="machine" class="img-square-100">
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center mx-0">
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Actual </b> </p>
+        <p class="text-lg text-light"> <b> 118 Nos. </b> </p>
+      </div>
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Up since </b> </p>
+        <p class="text-xs text-light"> <b> _ _ : _ _ , _ _ </b> </p>
+      </div>
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Target </b> </p>
+        <p class="text-lg text-light"> <b> 200 Nos. </b> </p>
+      </div>
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Last down </b> </p>
+        <p class="text-xs text-light"> <b> 21/8/2018 11:30 Am </b> </p>
+      </div>
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Rejection </b> </p>
+        <p class="text-lg text-light"> <b> 10 Nos. </b> </p>
+      </div>
+      <div class="col-6">
+        <p class="text-m text-light mb-0 opacity-50"> <b> Production rate </b> </p>
+        <p class="text-lg text-light"> <b> 0/min </b> </p>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <button class="btn btn-outline-primary bg-primary py-2 w-100" (click)="machinesRoute()">
+        <span class="text-m text-light opacity-90"> View details </span>
+      </button>
+    </div>
+  </div>
+</div>

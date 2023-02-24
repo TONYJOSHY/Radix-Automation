@@ -10,8 +10,7 @@
 
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
       routerLink="/dashboard" #rla1="routerLinkActive">
-      <button matTooltipPosition="right" matTooltip="Company profile" [matTooltipDisabled]="isExpand"
-        class="icons btn">
+      <button matTooltipPosition="right" matTooltip="Dashboard" [matTooltipDisabled]="isExpand" class="icons btn">
         <!-- <img class="icon" [src]="rla1.isActive ? 'assets/images/sidebar-icons/comp-pro-wh.svg' : 'assets/images/sidebar-icons/comp-pro.svg'" alt="" /> -->
         <img class="icon" [src]="'assets/images/sidebar-icons/comp-pro-wh.svg'" alt="" />
       </button>
@@ -19,23 +18,21 @@
     </a>
 
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
-      routerLink="/machines" #rla2="routerLinkActive">
-      <button matTooltipPosition="right" matTooltip="Configure" [matTooltipDisabled]="isExpand"
-        class="icons btn">
+      routerLink="/factory" #rla2="routerLinkActive">
+      <button matTooltipPosition="right" matTooltip="Factory" [matTooltipDisabled]="isExpand" class="icons btn">
         <!-- <img class="icon" [src]="rla2.isActive ? 'assets/images/sidebar-icons/configure-wh.svg' : 'assets/images/sidebar-icons/configure.svg'" alt="" /> -->
         <img class="icon" [src]="'assets/images/sidebar-icons/configure-wh.svg'" alt="" />
       </button>
-      <span *ngIf="isExpand">{{ "Machines" }}</span>
+      <span *ngIf="isExpand">{{ "Factory" }}</span>
     </a>
 
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
-      routerLink="/cold-storage" #rla3="routerLinkActive">
-      <button matTooltipPosition="right" matTooltip="Systems" [matTooltipDisabled]="isExpand"
-        class="icons btn">
+      routerLink="/machines" #rla3="routerLinkActive">
+      <button matTooltipPosition="right" matTooltip="Machines" [matTooltipDisabled]="isExpand" class="icons btn">
         <!-- <img class="icon" [src]="rla3.isActive ? 'assets/images/sidebar-icons/mysystem-wh.svg' : 'assets/images/sidebar-icons/mysystem.svg'" alt="" /> -->
         <img class="icon" [src]="'assets/images/sidebar-icons/mysystem-wh.svg'" alt="" />
       </button>
-      <span *ngIf="isExpand">{{ "Cold storage" }}</span>
+      <span *ngIf="isExpand">{{ "Machines" }}</span>
     </a>
 
   </div>

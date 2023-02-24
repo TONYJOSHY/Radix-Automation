@@ -20,7 +20,7 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  ngOnChanges(){ }
+  ngOnChanges() { }
 
 
 

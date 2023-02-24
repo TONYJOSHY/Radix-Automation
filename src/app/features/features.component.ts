@@ -8,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class FeaturesComponent implements OnInit {
 
   showComponents = true;
-  className= 'large-sidenav';
+  className = 'large-sidenav';
   isExpanded = true;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  sideToggle(data){
+  sideToggle(data) {
     this.isExpanded = !data;
-    if(data){
+    if (data) {
       this.className = 'small-sidenav'
-    }else{
+    } else {
       this.className = 'large-sidenav'
     }
   }
