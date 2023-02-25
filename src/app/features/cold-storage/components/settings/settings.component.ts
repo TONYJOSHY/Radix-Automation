@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class SettingsComponent implements OnInit {
 
-  isEdit = true;
+  isEdit = false;
 
   settingsForm: FormGroup = this.fb.group({
     conveyor_speed: [60],
@@ -27,8 +27,7 @@ export class SettingsComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   cancelForm() {
     console.log('here 1')

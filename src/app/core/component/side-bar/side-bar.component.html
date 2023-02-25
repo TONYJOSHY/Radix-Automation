@@ -1,17 +1,9 @@
 <div class="side-bar" [ngClass]="isExpand ? 'large' : 'small'">
-  <!-- <div class="goto-btn">
-    <a class="gotobutton font-1-medium d-flex align-items-center justify-content-center py-1" [href]="goToFramework">
-      <button matTooltipPosition="right" matTooltip="To module overview" [matTooltipDisabled]="isExpand"
-        class="icons btn"><img class="icon" src="./assets/images/icons/green_arrow.svg" alt=""></button>
-      <span *ngIf="isExpand">{{ "To module overview" }}</span>
-    </a>
-  </div> -->
   <div class="list-group mt-30">
 
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
       routerLink="/dashboard" #rla1="routerLinkActive">
       <button matTooltipPosition="right" matTooltip="Dashboard" [matTooltipDisabled]="isExpand" class="icons btn">
-        <!-- <img class="icon" [src]="rla1.isActive ? 'assets/images/sidebar-icons/comp-pro-wh.svg' : 'assets/images/sidebar-icons/comp-pro.svg'" alt="" /> -->
         <img class="icon" [src]="'assets/images/sidebar-icons/comp-pro-wh.svg'" alt="" />
       </button>
       <span *ngIf="isExpand">{{ "Dashboard" }}</span>
@@ -20,8 +12,7 @@
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
       routerLink="/factory" #rla2="routerLinkActive">
       <button matTooltipPosition="right" matTooltip="Factory" [matTooltipDisabled]="isExpand" class="icons btn">
-        <!-- <img class="icon" [src]="rla2.isActive ? 'assets/images/sidebar-icons/configure-wh.svg' : 'assets/images/sidebar-icons/configure.svg'" alt="" /> -->
-        <img class="icon" [src]="'assets/images/sidebar-icons/configure-wh.svg'" alt="" />
+        <img class="icon" [src]="'assets/images/sidebar-icons/mysystem-wh.svg'" alt="" />
       </button>
       <span *ngIf="isExpand">{{ "Factory" }}</span>
     </a>
@@ -29,21 +20,10 @@
     <a class="list-group-item font-1-medium d-flex align-items-center" [routerLinkActive]="['router-link-active']"
       routerLink="/machines" #rla3="routerLinkActive">
       <button matTooltipPosition="right" matTooltip="Machines" [matTooltipDisabled]="isExpand" class="icons btn">
-        <!-- <img class="icon" [src]="rla3.isActive ? 'assets/images/sidebar-icons/mysystem-wh.svg' : 'assets/images/sidebar-icons/mysystem.svg'" alt="" /> -->
-        <img class="icon" [src]="'assets/images/sidebar-icons/mysystem-wh.svg'" alt="" />
+        <img class="icon" [src]="'assets/images/sidebar-icons/configure-wh.svg'" alt="" />
       </button>
       <span *ngIf="isExpand">{{ "Machines" }}</span>
     </a>
 
   </div>
-
-
-  <!-- <div class="radio-btn d-lg-none">
-    <label id="radio-group-label">Language</label>
-    <mat-radio-group class="radio-group" [(ngModel)]="selectedLanguage">
-      <mat-radio-button class="radio-button" *ngFor="let language of languageList" [value]="language.code">
-        {{ language.name}}
-      </mat-radio-button>
-    </mat-radio-group>
-  </div> -->
 </div>
