@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-machines',
@@ -17,10 +18,10 @@ export class MachinesComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
   }
-  emitValue(item){ }
+  emitValue(item) { }
 
 }

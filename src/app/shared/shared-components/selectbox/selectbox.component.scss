@@ -2,11 +2,13 @@
   border: 1px solid var(--secondary);
   box-sizing: border-box;
   border-radius: .6rem;
-  height: 2.5rem;
+  height: 2.5rem !important;
   font-size: var(--size-small) !important;
   color: var(--primary) !important;
   font-weight: 500 !important;
   opacity: .7;
+  min-width: 10rem !important;
+  width: 100% !important;
 }
 
 ::ng-deep .filterPanelClass {

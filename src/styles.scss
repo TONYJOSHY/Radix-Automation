@@ -431,37 +431,37 @@ ct-table .mat-menu-trigger:hover {
 
 // Mat table
 
-.ct-table {
-  overflow-x: auto;
-}
+// .ct-table {
+//   overflow-x: auto;
+// }
 
-.ct-table .mat-table.mat-table {
-  min-width: 850px;
-}
+// .ct-table .mat-table.mat-table {
+//   min-width: 850px;
+// }
 
-.ct-table-footer {
-  min-width: 850px;
-}
+// .ct-table-footer {
+//   min-width: 850px;
+// }
 
-.ct-table .mat-cell,
-.mat-footer-cell {
-  font-weight: 500 !important;
-  font-family: "Roboto Regular", "Inter", sans-serif !important;
-  font-size: var(--size-small) !important;
-}
+// .ct-table .mat-cell,
+// .mat-footer-cell {
+//   font-weight: 500 !important;
+//   font-family: "Roboto Regular", "Inter", sans-serif !important;
+//   font-size: var(--size-small) !important;
+// }
 
-.ct-table mat-row,
-mat-header-row,
-mat-footer-row,
-th.mat-header-cell,
-td.mat-cell,
-td.mat-footer-cell {
-  border: none !important;
-}
+// .ct-table mat-row,
+// mat-header-row,
+// mat-footer-row,
+// th.mat-header-cell,
+// td.mat-cell,
+// td.mat-footer-cell {
+//   border: none !important;
+// }
 
-.ct-table .mat-row:nth-child(odd) {
-  background-color: var(--light, #f9f9f9);
-}
+// .ct-table .mat-row:nth-child(odd) {
+//   background-color: var(--light, #f9f9f9);
+// }
 
 //mat table paginator
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-cold-storage',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColdStorageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
   }

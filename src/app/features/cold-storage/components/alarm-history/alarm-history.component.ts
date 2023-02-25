@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlarmHistoryComponent implements OnInit {
 
+  displayedColumns = ['alarm', 'on_time', 'off_time', 'ack_time'];
+  dataSource = [1, 2, 3]
+
   constructor() { }
 
   ngOnInit(): void {

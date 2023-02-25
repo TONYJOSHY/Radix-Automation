@@ -1,26 +1,18 @@
 <form>
   <div class="position-relative ">
-    <mat-select #mySelect
-      class="custom-filter"
-      panelClass="filterPanelClass"
-      [(value)]="selected"
-      (openedChange)="clearSearch()"
-      (selectionChange)="change()"
-      [disableOptionCentering]="true"
-      [ngClass]="{ 'focus-border' : focus == true }" >
-      <div class="drop-down-body" >
-        <div class="options-scroll" >
-          <mat-option id="filter-option" class="option-hover"
-            *ngFor="let option of filteredOptions | async;"
-            [value]="option"
-            (keydown)="$event.stopPropagation()">
+    <mat-select #mySelect class="custom-filter" panelClass="filterPanelClass" [(value)]="selected"
+      (openedChange)="clearSearch()" (selectionChange)="change()" [disableOptionCentering]="true"
+      [ngClass]="{ 'focus-border' : focus == true }">
+      <div class="drop-down-body">
+        <div class="options-scroll">
+          <mat-option id="filter-option" class="option-hover" *ngFor="let option of filteredOptions | async;"
+            [value]="option" (keydown)="$event.stopPropagation()">
             {{option[nameField]}}
           </mat-option>
         </div>
       </div>
     </mat-select>
 
-    <i class="material-icons curser-pointer dropdown-icon-sm"
-      (click)="mySelect.toggle()" >keyboard_arrow_down</i>
+    <i class="material-icons curser-pointer dropdown-icon-sm" (click)="mySelect.toggle()">keyboard_arrow_down</i>
   </div>
 </form>
