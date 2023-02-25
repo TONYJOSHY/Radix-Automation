@@ -1,8 +1,8 @@
 /* Image/icon sizes */
 
 .img-square-100{
-  width: 10rem !important;
-  height: 10rem !important;
+  width: 12rem !important;
+  height: 12rem !important;
   object-fit: cover;
   border-radius: 50%;
 }

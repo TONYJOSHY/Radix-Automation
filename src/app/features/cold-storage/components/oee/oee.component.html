@@ -1,1 +1,43 @@
-<p>oee works!</p>
+<div class="row mx-0 h-100 max-height">
+  <div class="p-4 div-border w-100">
+    <div class="col-12 px-0">
+      <p class="text-m text-light"> <b> OEE </b> </p>
+    </div>
+    <div class="col-12 d-flex justify-content-center align-items-center mb-5" style="max-height: 12rem !important;">
+      <canvas baseChart [datasets]="doughnutChartDataOEE" [options]="chartOptions" [chartType]="doughnutChartType">
+      </canvas>
+      <p class="mb-0 text-xxl text-secondary percent-position"> 65% </p>
+    </div>
+    <div class="col-12 px-0">
+      <div class="row align-items-center justify-content-around mx-0">
+        <div class="col-4">
+          <p class="mb-0 text-sm text-light text-center"> <b> Performance </b> </p>
+          <div style="max-height: 10rem !important;">
+            <canvas baseChart [datasets]="doughnutChartDataPerformance" [options]="chartOptions"
+              [chartType]="doughnutChartType">
+            </canvas>
+            <p class="mb-0 text-m text-warning percent-position-small"> 50% </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <p class="mb-0 text-sm text-light text-center"> <b> Quality </b> </p>
+          <div style="max-height: 10rem !important;">
+            <canvas baseChart [datasets]="doughnutChartDataQuality" [options]="chartOptions"
+              [chartType]="doughnutChartType">
+            </canvas>
+            <p class="mb-0 text-m text-success percent-position-small"> 85% </p>
+          </div>
+        </div>
+        <div class="col-4">
+          <p class="mb-0 text-sm text-light text-center"> <b> Availability </b> </p>
+          <div style="max-height: 10rem !important;">
+            <canvas baseChart [datasets]="doughnutChartDataAvalability" [options]="chartOptions"
+              [chartType]="doughnutChartType">
+            </canvas>
+            <p class="mb-0 text-m text-danger percent-position-small"> 45% </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

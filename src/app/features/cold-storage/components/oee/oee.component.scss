@@ -1,0 +1,13 @@
+.percent-position{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-weight: 600;
+}
+
+.percent-position-small{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  font-weight: 600;
+}

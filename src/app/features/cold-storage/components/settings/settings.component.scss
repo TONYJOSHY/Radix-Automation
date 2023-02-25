@@ -1,0 +1,16 @@
+.input-box{
+  font-size: var(--size-large, 2rem) !important;
+  max-width: 10rem;
+  color: var(--primary) !important;
+  border-radius: 5px !important;
+  padding: 0rem .5rem;
+  background-color: var(--emerald);
+}
+
+::ng-deep #mat-slide .mat-slide-toggle-thumb{
+  background-color: var(--success) !important;
+}
+
+::ng-deep #mat-slide .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb{
+  background-color: var(--danger) !important;
+}
