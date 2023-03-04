@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 import { UtilityService } from 'src/app/shared/services/utility/utility.service';
+import { DashboardService } from '../../service/dashboard-service.service';
 
 @Component({
   selector: 'app-energy-consumption',
@@ -60,11 +61,11 @@ export class EnergyConsumptionComponent implements OnInit {
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
+  public lineChartLabel: Label[] = [];
 
   public lineChartData: ChartDataSets[] = [
     {
-      data: [110, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115],
+      data: [],
       label: 'Energy Consumed',
       backgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d',
       borderColor: this.utilityService.cssVariables.secondary || '#e31c3d',
@@ -75,7 +76,7 @@ export class EnergyConsumptionComponent implements OnInit {
       fill: false,
     },
     {
-      data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 35, 45, 50, 45, 50, 45, 50, 45, 30, 20, 10, 0, 0, 0, 0],
+      data: [],
       label: 'Solar Production',
       backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
       borderColor: this.utilityService.cssVariables.success || '#4aa564',
@@ -87,9 +88,25 @@ export class EnergyConsumptionComponent implements OnInit {
     }
   ]
 
-  constructor(public utilityService: UtilityService) { }
+  energyConsumptionData: any;
+
+  constructor(public utilityService: UtilityService,
+    private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.energyConsumptionData = this.dashboardService.energyConsumptionChart[0];
+    this.setEnergyConsumption(this.energyConsumptionData)
+  }
+
+  setEnergyConsumption(data) {
+    this.lineChartLabel = data.x_axis;
+    this.lineChartData[0].data = data.data_energy_consumed;
+    this.lineChartData[1].data = data.data_solar_production;
+  }
+
+  calenderSelection(item) {
+    this.energyConsumptionData = this.dashboardService.energyConsumptionChart[item.index];
+    this.setEnergyConsumption(this.energyConsumptionData)
   }
 
 }

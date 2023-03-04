@@ -3,16 +3,22 @@
     <div class="col-12 d-flex align-items-center justify-content-between">
       <p class="text-m text-light"> <b> Production </b> </p>
       <div>
-        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''">
+        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''"
+          (selectEvent)="calenderSelection($event)">
         </app-selectbox>
       </div>
     </div>
     <div class="col-12 text-center">
-      <p class="mb-2 text-vl text-light"> <b> 30.05 K </b>
+      <p class="mb-2 text-vl text-light"> <b> {{ productionData.total }} </b>
         <span class="text-xxl opacity-50"> Units </span>
       </p>
-      <p class="text-sm text-success d-flex align-items-center justify-content-center"> 10%
-        <mat-icon class="icon-size"> north </mat-icon>
+      <p class="text-sm text-success d-flex align-items-center justify-content-center" *ngIf="productionData.increment">
+        {{ productionData.increment_value }} %
+        <mat-icon class="icon-size pl-3"> north </mat-icon>
+      </p>
+      <p class="text-sm text-danger d-flex align-items-center justify-content-center" *ngIf="!productionData.increment">
+        {{ productionData.increment_value }} %
+        <mat-icon class="icon-size pl-3"> south </mat-icon>
       </p>
     </div>
     <!-- two bar chart -->

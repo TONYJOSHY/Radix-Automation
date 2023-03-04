@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { UtilityService } from 'src/app/shared/services/utility/utility.service';
+import { DashboardService } from '../../service/dashboard-service.service';
 
 @Component({
   selector: 'app-man-power',
@@ -12,7 +13,7 @@ export class ManPowerComponent implements OnInit {
   public doughnutChartLabels: string[] = ['Engineering', 'Technitian', 'Sales', 'Administration'];
   public doughnutChartData = [
     {
-      data: [30, 20, 25, 15],
+      data: [],
       backgroundColor: [
         this.utilityService.cssVariables.secondary || '#0f48aa',
         this.utilityService.cssVariables.warning || '#f59200',
@@ -24,17 +25,12 @@ export class ManPowerComponent implements OnInit {
   public doughnutChartType: ChartType = 'doughnut';
 
   public chartOptions = {
-    elements: {
-      arc: { borderWidth: 0 }
-    },
+    elements: { arc: { borderWidth: 0 } },
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
     cutoutPercentage: 60,
-    circumference: 1.8 * Math.PI,
-    // layout: {
-    //   padding: { bottom: 20 }
-    // },
+    circumference: 2 * Math.PI,
     legend: {
       display: true,
       position: 'bottom',
@@ -58,10 +54,6 @@ export class ManPowerComponent implements OnInit {
         },
       },
     },
-    // datalabels: {
-    //   anchor: 'end',
-    //   align: 'end'
-    // },
   };
 
   public doughnutChartPlugins = [{
@@ -74,17 +66,26 @@ export class ManPowerComponent implements OnInit {
         }
       )
     },
-    // beforeInit: function (chart) {
-    //   chart.legend.afterFit = function(){
-    //     this.height = this.height + 30;
-    //   }
-    // }
   }];
 
+  manPowerData: any;
 
-  constructor(public utilityService: UtilityService) { }
+  constructor(public utilityService: UtilityService,
+    private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.manPowerData = this.dashboardService.manPowerChart[0];
+    this.setChartData(this.manPowerData)
+  }
+
+  setChartData(data) {
+    this.doughnutChartData[0].data = data.man_power_data;
+    this.chartOptions.circumference = 2 * Math.PI * (data.total / 100)
+  }
+
+  calenderSelection(item) {
+    this.manPowerData = this.dashboardService.manPowerChart[item.index];
+    this.setChartData(this.manPowerData)
   }
 
 }

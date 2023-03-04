@@ -1,12 +1,12 @@
 <div class="row mx-0 h-100">
   <div class="p-4 div-border w-100">
-    <div class="col-12">
+    <div class="col-12 mb-5">
       <p class="text-lg text-light"> <b> Overall Efficiency </b> </p>
     </div>
     <!-- doughnut chart -->
     <div class="col-12 d-flex justify-content-center align-items-center max-height">
       <canvas baseChart [datasets]="doughnutChartData" [labels]="doughnutChartLabels" [options]="chartOptions"
-        [chartType]="doughnutChartType" [plugins]="doughnutChartPlugins">
+        [chartType]="doughnutChartType">
       </canvas>
       <p class="mb-0 text-xxxl text-success percent-position"> 90% </p>
     </div>

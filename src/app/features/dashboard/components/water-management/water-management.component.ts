@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 import { UtilityService } from 'src/app/shared/services/utility/utility.service';
+import { DashboardService } from '../../service/dashboard-service.service';
 
 @Component({
   selector: 'app-water-management',
@@ -14,9 +15,6 @@ export class WaterManagementComponent implements OnInit {
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
-    // layout: {
-    //   padding: { bottom: 20 }
-    // },
     elements: {
       line: {
         tension: 0.5
@@ -32,10 +30,6 @@ export class WaterManagementComponent implements OnInit {
         boxHeight: 15,
       },
     },
-    // datalabels: {
-    //   anchor: 'center',
-    //   align: 'center'
-    // },
     scales: {
       xAxes: [{
         gridLines: {
@@ -61,8 +55,6 @@ export class WaterManagementComponent implements OnInit {
     tooltips: {
       displayColors: false,
       backgroundColor: '#060606',
-
-      // padding: 50,
       callbacks: {
         title: function (tooltipItem, data) {
           return data['labels'][tooltipItem[0]['index']];
@@ -72,34 +64,14 @@ export class WaterManagementComponent implements OnInit {
         },
       },
     },
-    annotation: {
-      annotations: [
-        {
-          type: 'line',
-          scaleID: 'x',
-          value: 'March',
-          borderColor: 'orange',
-          borderWidth: 2,
-          label: {
-            display: true,
-            position: 'center',
-            color: 'orange',
-            content: 'LineAnno',
-            font: {
-              weight: 'bold'
-            }
-          }
-        },
-      ],
-    }
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = ['0', '4', '8', '12', '16', '20'];
+  public lineChartLabel: Label[] = [];
 
   public lineChartData: ChartDataSets[] = [
     {
-      data: [500, 510, 200, 400, 500, 490],
+      data: [],
       label: 'Water consumption',
       backgroundColor: this.utilityService.cssVariables.info || '#0f48aa',
       borderColor: this.utilityService.cssVariables.info || '#0f48aa',
@@ -110,7 +82,7 @@ export class WaterManagementComponent implements OnInit {
       fill: false,
     },
     {
-      data: [200, 200, 190, 200, 210, 200],
+      data: [],
       label: 'Treated Water',
       backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
       borderColor: this.utilityService.cssVariables.success || '#4aa564',
@@ -122,9 +94,25 @@ export class WaterManagementComponent implements OnInit {
     }
   ]
 
-  constructor(public utilityService: UtilityService) { }
+  waterManagementData: any;
+
+  constructor(public utilityService: UtilityService,
+    private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.waterManagementData = this.dashboardService.waterManagementChart[0];
+    this.setChartData(this.waterManagementData)
+  }
+
+  setChartData(data) {
+    this.lineChartLabel = data.x_axis;
+    this.lineChartData[0].data = data.water_consumption;
+    this.lineChartData[1].data = data.treated_water;
+  }
+
+  calenderSelection(data) {
+    this.waterManagementData = this.dashboardService.waterManagementChart[data.index];
+    this.setChartData(this.waterManagementData)
   }
 
 }

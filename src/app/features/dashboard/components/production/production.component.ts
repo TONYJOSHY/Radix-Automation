@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 import { UtilityService } from 'src/app/shared/services/utility/utility.service';
+import { DashboardService } from '../../service/dashboard-service.service';
 
 @Component({
   selector: 'app-production',
@@ -11,16 +12,13 @@ import { UtilityService } from 'src/app/shared/services/utility/utility.service'
 export class ProductionComponent implements OnInit {
 
   public barChartOptions = {
-    // layout: {
-    //   padding: { bottom: 20 }
-    // },
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
     legend: {
       display: true,
       position: 'bottom',
-      align: 'start',
+      align: 'center',
       labels: {
         // fontColor: this.utilityService.cssVariables.secondary || '#0f48aa',
         fontSize: 14,
@@ -62,37 +60,42 @@ export class ProductionComponent implements OnInit {
         },
       },
     },
-    // datalabels: {
-    //   anchor: 'end',
-    //   align: 'end'
-    // }
   };
 
   public barChartType: ChartType = 'bar';
 
-  public barChartLabels: Label[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'];
+  public barChartLabels: Label[] = [];
   public barChartColors = [
     { backgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d' },
     { backgroundColor: this.utilityService.cssVariables['sea-green'] || '#4aa564' },
   ]
 
   public barChartData: ChartDataSets[] = [
-    { data: [1000, 1500, 1200, 1300, 1500, 1000, 1500, 1200, 1300, 1500, 1000, 1500, 1200, 1300, 1500, 1000, 1500, 1200, 1300, 1500, 1000, 1500, 1200, 1300], label: 'Target Production', fill: false },
-    { data: [1000, 1400, 1200, 1250, 1450, 1000, 1400, 1200, 1250, 1450, 1000, 1400, 1200, 1250, 1450, 1000, 1400, 1200, 1250, 1450, 1000, 1400, 1200, 1250], label: 'Actual Production', fill: false },
+    { data: [], label: 'Target Production' },
+    { data: [], label: 'Actual Production' },
   ]
 
-  public barChartPlugins = [{
-    beforeInit: function (chart) {
-      chart.legend.afterFit = function () {
-        this.height = this.height + 15;
-      }
-    }
-  }];
+  productionData: any;
 
-
-  constructor(public utilityService: UtilityService) { }
+  constructor(public utilityService: UtilityService,
+    private dashBoardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.productionData = this.dashBoardService.productionChartData[0];
+    this.setChartData(this.productionData)
+  }
+
+  setChartData(data) {
+    this.barChartLabels = data.x_axis;
+    this.barChartData = [
+      { data: data.data_target, label: 'Target Production' },
+      { data: data.data_actual, label: 'Actual Production' },
+    ]
+  }
+
+  calenderSelection(item) {
+    this.productionData = this.dashBoardService.productionChartData[item.index];
+    this.setChartData(this.productionData)
   }
 
 }

@@ -1,9 +1,10 @@
 <div class="row mx-0 h-100">
   <div class="p-4 div-border w-100">
-    <div class="col-12 d-flex align-items-center justify-content-between">
+    <div class="col-12 mb-5 d-flex align-items-center justify-content-between">
       <p class="text-m text-light"> <b> Man Power </b> </p>
       <div>
-        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''">
+        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''"
+          (selectEvent)="calenderSelection($event)">
         </app-selectbox>
       </div>
     </div>
