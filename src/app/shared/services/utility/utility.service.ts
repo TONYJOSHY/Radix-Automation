@@ -6,12 +6,10 @@ import { Injectable } from '@angular/core';
 export class UtilityService {
 
   calenderFilter = [
-    { id: '', name: 'All dates' },
-    { id: '1', name: 'Today' },
-    { id: '2', name: 'Last day' },
-    { id: '3', name: 'This week' },
-    { id: '4', name: 'This month' },
-    { id: '5', name: 'This year' }
+    { id: '', name: 'Today' },
+    { id: '1', name: 'This month' },
+    { id: '2', name: 'This year' },
+    { id: '3', name: 'Custom' }
   ];
 
   cssVariables: any = {};
@@ -20,7 +18,7 @@ export class UtilityService {
     this.getCssVariables()
   }
 
-  getCssVariables(){
+  getCssVariables() {
     const bodyStyles = window.getComputedStyle(document.body);
     this.cssVariables = {
       primary: bodyStyles.getPropertyValue('--primary'),

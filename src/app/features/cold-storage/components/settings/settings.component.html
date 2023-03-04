@@ -1,11 +1,11 @@
 <div class="row mx-0 h-100">
   <div class="p-4 div-border w-100">
     <div class="col-12">
-      <div class="w-100 d-flex align-items-center mb-3">
+      <div class="w-100 d-flex align-items-center my-3">
         <p class="text-m text-light mr-5 mb-0"> <b> Settings </b> </p>
-        <mat-slide-toggle (change)="isEdit = $event.checked" id="mat-slide">
-          <span *ngIf="isEdit" class="text-danger"> Edit </span>
-          <span *ngIf="!isEdit" class="opacity-50"> View </span>
+        <mat-slide-toggle class="mat-slide" (change)="isEdit = $event.checked" [checked]="isEdit" id="mat-slide">
+          <span *ngIf="isEdit" class="opacity-50"> Edit </span>
+          <!-- <span *ngIf="!isEdit" class="opacity-50"> View </span> -->
         </mat-slide-toggle>
       </div>
     </div>
@@ -41,7 +41,7 @@
               <span class="text-danger" *ngIf="!settings.conveyor_on.value"> <b> Off </b> </span>
             </p>
             <ng-container *ngIf="isEdit">
-              <mat-slide-toggle class="my-2" formControlName="conveyor_on" id="mat-slide">
+              <mat-slide-toggle class="my-2 mat-slide" formControlName="conveyor_on">
                 <span *ngIf="settings.conveyor_on.value" class="text-success"> On </span>
                 <span *ngIf="!settings.conveyor_on.value" class="text-danger"> Off </span>
               </mat-slide-toggle>
@@ -54,7 +54,7 @@
               <span class="text-danger" *ngIf="!settings.filler_on.value"> <b> Off </b> </span>
             </p>
             <ng-container *ngIf="isEdit">
-              <mat-slide-toggle class="my-2" formControlName="filler_on" id="mat-slide">
+              <mat-slide-toggle class="my-2 mat-slide" formControlName="filler_on">
                 <span *ngIf="settings.filler_on.value" class="text-success"> On </span>
                 <span *ngIf="!settings.filler_on.value" class="text-danger"> Off </span>
               </mat-slide-toggle>

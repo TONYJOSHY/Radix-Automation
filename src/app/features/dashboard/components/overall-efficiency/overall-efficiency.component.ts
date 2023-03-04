@@ -40,7 +40,7 @@ export class OverallEfficiencyComponent implements OnInit {
     // },
     legend: {
       display: true,
-      position: 'top',
+      position: 'bottom',
       align: 'start',
       labels: {
         fontSize: 14,

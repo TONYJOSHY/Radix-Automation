@@ -30,8 +30,7 @@ export class SettingsComponent implements OnInit {
   ngOnInit(): void { }
 
   cancelForm() {
-    console.log('here 1')
-    // this.isEdit = false;
+    this.isEdit = false;
     this.settingsForm.patchValue({
       conveyor_speed: 60,
       filler_speed: 1200,
@@ -47,13 +46,7 @@ export class SettingsComponent implements OnInit {
   }
 
   submitForm() {
-    console.log('here')
-    // this.isEdit = false;
-    console.log(this.settingsForm.value)
-  }
-
-  setSliderValue(control, event) {
-    // this.settings[control].setValue(event.checked)
+    this.isEdit = false;
     console.log(this.settingsForm.value)
   }
 

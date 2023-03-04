@@ -42,6 +42,14 @@
   border-radius: 6px !important;
 }
 
+::ng-deep .custom-filter .mat-select-value {
+  color: var(--font-color-2) !important;
+}
+
+::ng-deep .custom-filter .mat-option-text {
+  color: var(--font-color-2) !important;
+}
+
 .option-hover {
   background: transparent !important;
 }

@@ -14,14 +14,10 @@ export class EnergyConsumptionComponent implements OnInit {
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
-    elements: {
-      line: {
-        tension: 0
-      }
-    },
+    elements: { line: { tension: 0 } },
     legend: {
       display: true,
-      position: 'top',
+      position: 'bottom',
       align: 'start',
       labels: {
         fontSize: 14,
@@ -29,25 +25,23 @@ export class EnergyConsumptionComponent implements OnInit {
         boxHeight: 15
       },
     },
-    datalabels: {
-      anchor: 'center',
-      align: 'center'
-    },
     scales: {
       xAxes: [{
         gridLines: {
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
       }],
       yAxes: [{
         display: true,
         gridLines: {
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
           beginAtZero: true,
-          // max: 100,
-          // min: 0
         },
       }]
     },
@@ -59,38 +53,18 @@ export class EnergyConsumptionComponent implements OnInit {
           return data['labels'][tooltipItem[0]['index']];
         },
         label: function (tooltipItem, data) {
-          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]) + ' %';
+          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]);
         },
       },
     },
-    annotation: {
-      annotations: [
-        {
-          type: 'line',
-          scaleID: 'x',
-          // value: 'March',
-          // borderColor: 'orange',
-          borderWidth: 2,
-          label: {
-            display: true,
-            position: 'center',
-            // color: 'orange',
-            // content: 'LineAnno',
-            font: {
-              weight: 'bold'
-            }
-          }
-        },
-      ],
-    }
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = ['1', '2', '3', '4', '5', '6']
+  public lineChartLabel: Label[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
 
   public lineChartData: ChartDataSets[] = [
     {
-      data: [10, 20, 15, 10, 25, 20],
+      data: [110, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115, 115, 120, 125, 130, 125, 115],
       label: 'Energy Consumed',
       backgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d',
       borderColor: this.utilityService.cssVariables.secondary || '#e31c3d',
@@ -101,7 +75,7 @@ export class EnergyConsumptionComponent implements OnInit {
       fill: false,
     },
     {
-      data: [5, 7, 10, 4, 15, 10],
+      data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 35, 45, 50, 45, 50, 45, 50, 45, 30, 20, 10, 0, 0, 0, 0],
       label: 'Solar Production',
       backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
       borderColor: this.utilityService.cssVariables.success || '#4aa564',

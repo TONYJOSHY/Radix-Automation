@@ -24,7 +24,7 @@ export class WaterManagementComponent implements OnInit {
     },
     legend: {
       display: true,
-      position: 'top',
+      position: 'bottom',
       align: 'start',
       labels: {
         fontSize: 14,
@@ -32,20 +32,24 @@ export class WaterManagementComponent implements OnInit {
         boxHeight: 15,
       },
     },
-    datalabels: {
-      anchor: 'center',
-      align: 'center'
-    },
+    // datalabels: {
+    //   anchor: 'center',
+    //   align: 'center'
+    // },
     scales: {
       xAxes: [{
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
       }],
       yAxes: [{
         display: true,
         gridLines: {
-          zeroLineColor: '#FFFFFF'
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
+          zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
           beginAtZero: true,
@@ -64,7 +68,7 @@ export class WaterManagementComponent implements OnInit {
           return data['labels'][tooltipItem[0]['index']];
         },
         label: function (tooltipItem, data) {
-          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]) + ' %';
+          return Math.round(data['datasets'][0]['data'][tooltipItem['index']]);
         },
       },
     },
@@ -91,11 +95,11 @@ export class WaterManagementComponent implements OnInit {
   };
 
   public lineChartType: ChartType = 'line';
-  public lineChartLabel: Label[] = ['1', '2', '3', '4', '5', '6']
+  public lineChartLabel: Label[] = ['0', '4', '8', '12', '16', '20'];
 
   public lineChartData: ChartDataSets[] = [
     {
-      data: [10, 20, 15, 10, 25, 20],
+      data: [500, 510, 200, 400, 500, 490],
       label: 'Water consumption',
       backgroundColor: this.utilityService.cssVariables.info || '#0f48aa',
       borderColor: this.utilityService.cssVariables.info || '#0f48aa',
@@ -106,7 +110,7 @@ export class WaterManagementComponent implements OnInit {
       fill: false,
     },
     {
-      data: [5, 10, 12, 8, 7, 5],
+      data: [200, 200, 190, 200, 210, 200],
       label: 'Treated Water',
       backgroundColor: this.utilityService.cssVariables.success || '#4aa564',
       borderColor: this.utilityService.cssVariables.success || '#4aa564',

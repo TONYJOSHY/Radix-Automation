@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   userData: any;
   resizeObservable$: Observable<Event>;
   resizeSubscription$: Subscription;
-  isSidenavHide = false;
+  isSidenavHide = true;
   @Output() toggleSideBar = new EventEmitter();
 
   constructor(
@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.toggle();
   }
 
   ngOnDestroy() {

@@ -14,7 +14,7 @@ export class OeeComponent implements OnInit {
       data: [65, 35],
       backgroundColor: [
         this.utilityService.cssVariables.secondary || '#0f48aa',
-        this.utilityService.cssVariables['font-color'] || '#f59200',
+        this.utilityService.cssVariables['font-color-3'] || '#f59200',
       ],
     }
   ];
@@ -24,7 +24,7 @@ export class OeeComponent implements OnInit {
       data: [50, 50],
       backgroundColor: [
         this.utilityService.cssVariables.warning || '#0f48aa',
-        this.utilityService.cssVariables['font-color'] || '#f59200',
+        this.utilityService.cssVariables['font-color-3'] || '#f59200',
       ],
     }
   ]
@@ -34,7 +34,7 @@ export class OeeComponent implements OnInit {
       data: [45, 55],
       backgroundColor: [
         this.utilityService.cssVariables.danger || '#0f48aa',
-        this.utilityService.cssVariables['font-color'] || '#f59200',
+        this.utilityService.cssVariables['font-color-3'] || '#f59200',
       ],
     }
   ]
@@ -44,7 +44,7 @@ export class OeeComponent implements OnInit {
       data: [85, 15],
       backgroundColor: [
         this.utilityService.cssVariables.success || '#0f48aa',
-        this.utilityService.cssVariables['font-color'] || '#f59200',
+        this.utilityService.cssVariables['font-color-3'] || '#f59200',
       ],
     }
   ]

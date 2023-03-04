@@ -39,12 +39,7 @@
   object-fit: cover;
 }
 
-.fw-600 {
-  font-weight: 600;
-}
-
 .div-border {
-  /* border: 1px solid var(--light); */
   border-radius: 0.5rem;
   background-color: var(--font-color-3);
 }
@@ -69,83 +64,7 @@
   background-color: var(--btn-hover);
 }
 
-/* @font-face {
-  font-family: 'NotoSans Regular';
-  src: url('/assets/fonts/NotoSans-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NotoSans Medium';
-  src: url('/assets/fonts/NotoSans-Regular.ttf');
-  font-weight: 500;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'NotoSans Bold';
-  src: url('/assets/fonts/NotoSans-Bold.ttf');
-  font-weight: bold;
-  font-style: normal;
-} */
-
-/*
-.font-bold {
-  font-family: 'NotoSans Bold' !important;
-}
-
-.font-medium {
-  font-family: 'NotoSans Medium' !important;
-}
-
-.font-normal {
-  font-family: 'NotoSans Regular' !important;
-} */
-
 /* Custom text classes */
-
-.title-text {
-  font-size: var(--size-xxxlarge, 3.5rem) !important;
-  font-weight: bold;
-}
-
-.page-title {
-  font-weight: bold !important;
-  font-size: var(--size-medium, 1.8rem) !important;
-  color: var(--font-color-primary) !important;
-}
-
-.page-sub-title {
-  font-weight: bold !important;
-  font-size: var(--size-regular, 1.6rem) !important;
-  color: var(--font-color-primary) !important;
-}
-
-.staff-page-title {
-  font-weight: bold !important;
-  font-size: var(--size-medium) !important;
-  /* color: var(--font-color-primary) !important; */
-}
-
-.staff-page-sub-title {
-  font-weight: bold !important;
-  font-size: var(--size-small) !important;
-  /* color: var(--font-color-primary) !important; */
-}
-
-.staff-page-label-title {
-  font-weight: bold !important;
-  font-size: var(--size-xsmall) !important;
-  color: var(--font-color-secondary) !important;
-}
-
-.page-label-title {
-  font-weight: bold !important;
-  font-size: var(--size-small, 1.4rem) !important;
-  color: var(--font-color-secondary) !important;
-}
 
 .sub-title {
   font-size: var(--size-xlarge, 2.4rem) !important;
@@ -231,57 +150,6 @@
   font-weight: 400 !important;
 }
 
-.btn-custom-1 {
-  color: white !important;
-  background-color: var(--sea-green) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-.btn-custom-1:disabled {
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-.btn-custom-2 {
-  border: 0.1rem solid var(--sea-green) !important;
-  background-color: white !important;
-  color: var(--sea-green) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-.btn-custom-2:disabled {
-  border: 0.1rem solid var(--athens-gray) !important;
-  background-color: white !important;
-  color: var(--dolphin) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-.btn-custom-3 {
-  border: 0.1rem solid var(--sea-green) !important;
-  background-color: transparent !important;
-  color: var(--sea-green) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-.btn-custom-4 {
-  border: 1px solid var(--warning) !important;
-  background-color: transparent !important;
-  color: var(--warning) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-.btn-custom-3:disabled {
-  border: none !important;
-  background-color: white !important;
-  color: var(--dolphin) !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
 .btn-custom-lg {
   padding: 1.2rem 2.4rem !important;
   font-size: var(--size-small) !important;
@@ -344,79 +212,6 @@
   border-bottom: none !important;
 }
 
-.mat-paginator-navigation-last {
-  display: none !important;
-}
-
-.mat-paginator-navigation-first {
-  display: none !important;
-}
-
-.mat-paginator-navigation-previous {
-  position: relative;
-  right: 100px !important;
-}
-
-.mat-paginator-range-label {
-  position: relative;
-  left: 50px !important;
-  margin: 0 12px 0 24px !important;
-}
-
-.mat-paginator .mat-form-field-flex {
-  border-bottom: 1px solid var(--font-color) !important;
-}
-
-.mat-paginator {
-  font-size: var(--size-small) !important;
-  color: var(--font-color) !important;
-}
-
-.mat-paginator .mat-select-value {
-  font-size: var(--size-small) !important;
-  color: var(--font-color) !important;
-}
-
-.mat-paginator .mat-form-field-appearance-legacy .mat-form-field-underline {
-  display: none !important;
-}
-
-.bg-table-row {
-  background-color: red !important;
-}
-
-.my-75 {
-  margin: 60px 0px;
-}
-
-.m-24px {
-  margin: 24px !important;
-}
-
-.my-24px {
-  margin: 24px 0px !important;
-}
-
-.mx-24px {
-  margin: 0px 24px !important;
-}
-
-.mr-24px {
-  margin-right: 24px !important;
-}
-
-.ml-24px {
-  margin-left: 24px !important;
-}
-
-.mt-24px {
-  margin-top: 24px !important;
-}
-
-.mb-24px {
-  margin-bottom: 24px !important;
-}
-
 .mat-tab-label-content {
   font-weight: bold !important;
   font-size: var(--size-medium) !important;
@@ -425,10 +220,6 @@
 .mat-tab-label-active .mat-tab-label-content {
   color: var(--sea-green) !important;
 }
-
-/* .mat-tab-header {
-  border-bottom: 2px solid var(--tea-green) !important;
-} */
 
 tr.table-expand-row {
   height: 0 !important;
@@ -474,52 +265,6 @@ tr.table-expand-element-row:not(.table-expanded-row):active {
   opacity: 0.5;
 }
 
-.rectangle-1 {
-  background: #ffffff;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.full-size {
-  height: 100%;
-  width: 100%;
-}
-
-.drop-down-option {
-  height: auto;
-  width: 100%;
-  padding: 10px;
-}
-
-.drop-down-option:hover {
-  cursor: pointer;
-  background-color: var(--athens-gray);
-}
-
-.title-underline {
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: var(--tea-green);
-}
-
-.content-section {
-  min-height: 100px;
-  height: auto;
-  width: 100%;
-  background-color: var(--light);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.no-border {
-  border: none !important;
-}
-
-/* ::ng-deep mat-vertical-stepper-header{
-  pointer-events: none !important;
-} */
-
 input,
 input:focus,
 input:hover {
@@ -535,10 +280,12 @@ input:hover {
 .cursor-pointer {
   cursor: pointer !important;
 }
+
 .font-gray {
   color: var(--label-field);
   font-size: var(--size-small);
 }
+
 .fw-400 {
   font-weight: 400;
 }
@@ -548,13 +295,9 @@ input:hover {
 .fw-900 {
   font-weight: 900;
 }
-.font-secondary {
-  color: var(--font-color-3);
-}
+
 .disabled-font {
   color: var(--dolphin);
   font-size: var(--size-small);
 }
-.br-4 {
-  border-radius: 4px;
-}
+

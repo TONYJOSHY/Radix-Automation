@@ -1,47 +1,46 @@
 <div class="row justify-content-center">
 
-    <div class="col-md-6 col-lg-7 col-xl-6 row justify-content-lg-between align-items-lg-center">
-      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-md-0">
-        <div class=" text-xs">Show &nbsp;</div>
-  
-        <div class="position-relative wd-55px">
-          <mat-select [(value)]="pageSize" (selectionChange)="pageSizeChange()" class="custom-pageSize-filter">
-            <mat-option class="options-text" *ngFor="let option of pageSizeOptions" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-select>
-          <span class="material-icons arrow_drop_down dropdown-icon curser-pointer" (click)="openDropdown()">
-            expand_more 
-          </span>
-        </div>
-  
-        <div class="text-xs">&nbsp; per page</div>
+  <div class="col-md-6 col-lg-7 col-xl-6 row justify-content-lg-between align-items-lg-center">
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-md-0">
+      <div class=" text-xs">Show &nbsp;</div>
+
+      <div class="position-relative wd-55px">
+        <mat-select [(value)]="pageSize" (selectionChange)="pageSizeChange()" class="custom-pageSize-filter">
+          <mat-option class="options-text" *ngFor="let option of pageSizeOptions" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-select>
+        <span class="material-icons arrow_drop_down dropdown-icon cursor-pointer" (click)="openDropdown()">
+          expand_more
+        </span>
       </div>
-  
-      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-lg-between">
-        <button [disabled]="manualPage == 0" class="arrow-btn" (click)="prevManualPage()">
-          <span class="material-icons arrow">
-            navigate_before
-          </span>
-        </button>
-  
-        <ng-container *ngFor="let item of pageBtns">
-          <button *ngIf="item!='...'" class="page-btn" [ngClass]="{'selected-page-btn': item-1==manualPage}"
-            (click)="updateManualPage(item-1)">
-            {{item}}
-          </button>
-          <div *ngIf="item=='...'">
-            .&nbsp;.&nbsp;.
-          </div>
-        </ng-container>
-  
-        <button [disabled]="manualPage == maxPageIndex" class="arrow-btn" (click)="nextManualPage()">
-          <span class="material-icons arrow">
-            navigate_next
-          </span>
-        </button>
-      </div>
+
+      <div class="text-xs">&nbsp; per page</div>
     </div>
-  
+
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-lg-between">
+      <button [disabled]="manualPage == 0" class="arrow-btn" (click)="prevManualPage()">
+        <span class="material-icons arrow">
+          navigate_before
+        </span>
+      </button>
+
+      <ng-container *ngFor="let item of pageBtns">
+        <button *ngIf="item!='...'" class="page-btn" [ngClass]="{'selected-page-btn': item-1==manualPage}"
+          (click)="updateManualPage(item-1)">
+          {{item}}
+        </button>
+        <div *ngIf="item=='...'">
+          .&nbsp;.&nbsp;.
+        </div>
+      </ng-container>
+
+      <button [disabled]="manualPage == maxPageIndex" class="arrow-btn" (click)="nextManualPage()">
+        <span class="material-icons arrow">
+          navigate_next
+        </span>
+      </button>
+    </div>
   </div>
-  
+
+</div>

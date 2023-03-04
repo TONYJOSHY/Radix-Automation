@@ -1,8 +1,8 @@
 variables:
-  SLACK_CHANNEL: "logs-bc-server"
+  SLACK_CHANNEL: ""
 
-  DEV_BUCKET: "biochar-dev.cied.in"
-  DEV_CLOUDFRONT_ID: "E3BOQLVPYTA4L1"
+  DEV_BUCKET: ""
+  DEV_CLOUDFRONT_ID: ""
 
   STAGING_BUCKET: ""
   STAGING_CLOUDFRONT_ID: ""
