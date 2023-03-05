@@ -2,9 +2,16 @@
 
   <img class="header-logo cursor-pointer" src="./assets/images/Radic_l.png" alt="" (click)="moveTodashBoard()">
 
-  <button class="sidenav-toggle" type="button" (click)="toggleSidebar()">
-    <img src="assets/images/sidebartogglebutton.svg" alt="">
-  </button>
+  <div>
+    <div class="d-inline">
+      <img class="img-circle-sm mr-3" src="./assets/images/user_icon.svg" alt="">
+      <span class="text-sm text-light mr-4 d-none d-lg-inline">Donny Babby</span>
+
+    </div>
+    <button class="sidenav-toggle" type="button" (click)="toggleSidebar()">
+      <img src="assets/images/sidebartogglebutton.svg" alt="">
+    </button>
+  </div>
 
   <!-- <div class="collapse navbar-collapse">
         <div class="ml-auto">
@@ -39,18 +46,18 @@
     </div> -->
 
   <!-- <button class="navbar-toggler" type="button" [matMenuTriggerFor]="menu">
-        <a *ngIf="!userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
-            ngbDropdownToggle>
-            <img class="user-img mr-2 hide-img" src="./assets/images/user_icon.svg" alt="">
-            <span class="body-text mr-2 hide-cont d-none d-sm-block">Super Bio</span>
-            <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
-        </a>
-        <a *ngIf="userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
-            ngbDropdownToggle>
-            <img class="user-img mr-2 hide-img "
-                [src]="userData.image? userData.image : './assets/images/user_icon.svg'" alt="">
-            <span class="body-text mr-2 hide-cont d-none d-sm-block">{{userData?.session_data?.name}}</span>
-            <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
-        </a>
-    </button> -->
+    <a *ngIf="!userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
+      ngbDropdownToggle>
+      <img class="user-img mr-2 hide-img" src="./assets/images/user_icon.svg" alt="">
+      <span class="body-text mr-2 hide-cont d-none d-sm-block">Super Bio</span>
+      <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
+    </a>
+    <a *ngIf="userData" href="javascript:void(0)" class="nav-link font-1-bold d-flex align-items-center p-0"
+      ngbDropdownToggle>
+      <img class="user-img mr-2 hide-img " [src]="userData.image? userData.image : './assets/images/user_icon.svg'"
+        alt="">
+      <span class="body-text mr-2 hide-cont d-none d-sm-block">{{userData?.session_data?.name}}</span>
+      <mat-icon class="text-font1 hide-cont d-none d-sm-block">expand_more</mat-icon>
+    </a>
+  </button> -->
 </nav>
