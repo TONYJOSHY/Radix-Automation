@@ -8,9 +8,19 @@ import { UtilityService } from 'src/app/shared/services/utility/utility.service'
 })
 export class ColdStorageComponent implements OnInit {
 
+  machinesList = [{ id: '', index: '', name: 'No machine selected' }];
+
   constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
+  }
+
+  factorySelection(item) {
+    this.machinesList = item.machines;
+  }
+
+  machineSelection(item) {
+
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { DashboardService } from 'src/app/features/dashboard/service/dashboard-service.service';
 import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
@@ -43,14 +44,7 @@ export class CountBarChartComponent implements OnInit {
         ticks: {
           beginAtZero: true,
           min: 0,
-          callback: function (value, index, values) {
-            if (value) {
-              const roundedNumber = value
-              if (roundedNumber.toString().length < 4) return value;
-              else if (roundedNumber.toString().length < 7) return (value / 1000);
-              else return (value / 1000000);
-            }
-          },
+          max: 2000
         }
       }]
     },
@@ -70,24 +64,38 @@ export class CountBarChartComponent implements OnInit {
 
   public barChartType: ChartType = 'bar';
 
-  public barChartLabels: Label[] = ['1', '2', '3', '4', '5'];
+  public barChartLabels: Label[] = [];
   public barChartColors = [
     { backgroundColor: this.utilityService.cssVariables.primary || '#e31c3d' },
     { backgroundColor: this.utilityService.cssVariables.success || '#4aa564' },
   ]
 
   public barChartData: ChartDataSets[] = [
-    { data: [30, 45, 60, 20, 30], label: 'Target Production' },
-    { data: [5, 10, 15, 10, 7], label: 'Actual Production' },
+    { data: [], label: 'Target Production' },
+    { data: [], label: 'Actual Production' },
   ]
 
-  constructor(public utilityService: UtilityService) { }
+  countData: any;
+
+  constructor(public utilityService: UtilityService,
+    private dashBoardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.countData = this.dashBoardService.productionChartData[0];
+    this.setChartData(this.countData)
+  }
+
+  setChartData(data) {
+    this.barChartLabels = data.x_axis;
+    this.barChartData = [
+      { data: data.data_target, label: 'Target Production' },
+      { data: data.data_actual, label: 'Actual Production' },
+    ]
   }
 
   calenderSelection(item) {
-
+    this.countData = this.dashBoardService.productionChartData[item.index];
+    this.setChartData(this.countData)
   }
 
 }

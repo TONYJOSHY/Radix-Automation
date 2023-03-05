@@ -1,22 +1,23 @@
 <div class="row mx-0 pt-4 px-4 ">
   <div class="col-12 mb-3 d-flex align-items-center justify-content-between">
     <p class="text-xxl text-light"> <b> Factory Dashboard </b> </p>
-    <div class="d-inline-flex" style="width:10rem">
-      <!-- <div>
-        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''">
+    <div class="d-inline-flex" style="width:15rem">
+      <div style="width: 100%;">
+        <app-selectbox [options]="utilityService.factoryFilter" [nameField]="'name'" [defaultOptionId]="''">
         </app-selectbox>
-      </div> -->
+      </div>
     </div>
+  </div>
+  <div class="col-12 mb-4 mb-lg-0">
+    <app-performance-tile></app-performance-tile>
   </div>
   <div class="col-12 col-lg-4 mb-4 mb-lg-0">
     <app-efficiency-chart></app-efficiency-chart>
   </div>
-  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+  <div class="col-12 col-lg-8 mb-4 mb-lg-0">
     <app-count-bar-chart></app-count-bar-chart>
   </div>
-  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-    <app-performance-tile></app-performance-tile>
-  </div>
+
 </div>
 <div class="row mx-0 pb-5 py-lg-5 px-4 set-height">
   <div class="col-12 col-lg-4 mb-4">

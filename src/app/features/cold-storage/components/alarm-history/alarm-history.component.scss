@@ -4,7 +4,7 @@
 }
 
 .al-table .mat-table {
-  min-width: 50rem !important;
+  min-width: 55rem !important;
   width: 100% !important;
   min-height: 25rem !important;
 }
@@ -15,11 +15,13 @@
 }
 
 tr.mat-header-row{
+  // padding-left: 1rem !important;
   height: 1.2rem !important;
   border-bottom: 2px solid var(--secondary);
 }
 
 tr.mat-row, tr.mat-footer-row{
+  // padding-left: 1rem !important;
   height: 15px !important;
   border-bottom: 1px solid var(--dark);
 }
@@ -31,6 +33,7 @@ tr.mat-row, tr.mat-footer-row{
   font-size: var(--size-small) !important;
   word-break: break-all !important;
   color: var(--light) !important;
+  // padding-left: 1rem !important;
 }
 
 .al-table mat-row,
@@ -39,6 +42,7 @@ mat-footer-row,
 th.mat-header-cell,
 td.mat-cell,
 td.mat-footer-cell {
+  padding-left: 1rem !important;
   border: none !important;
 }
 

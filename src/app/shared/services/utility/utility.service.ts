@@ -12,6 +12,33 @@ export class UtilityService {
     { id: 3, index: 3, name: 'Custom' }
   ];
 
+  factoryFilter = [
+    {
+      id: 0, index: 0, name: 'Gloves factory',
+      machines: [
+        { id: 0, index: 0, name: 'Latex dipping line' },
+        { id: 1, index: 1, name: 'Tumbler machine' },
+        { id: 2, index: 2, name: 'Leak test machine' },
+      ]
+    },
+    {
+      id: 1, index: 1, name: 'Diary plant',
+      machines: [
+        { id: 0, index: 0, name: 'Pasteurisation unit' },
+        { id: 1, index: 1, name: 'Seperation unit' },
+        { id: 2, index: 2, name: 'Homogenisation unit' },
+      ]
+    },
+    {
+      id: 2, index: 2, name: 'Steel plant',
+      machines: [
+        { id: 0, index: 0, name: 'Heating unit' },
+        { id: 1, index: 1, name: 'Extrusion press' },
+        { id: 2, index: 2, name: 'Cutting unit' },
+      ]
+    }
+  ]
+
   cssVariables: any = {};
 
   constructor() {

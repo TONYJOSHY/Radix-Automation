@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="col-12 text-center">
-      <p class="mb-2 text-vl text-light"> <b> {{ productionData.total }} </b>
+      <p class="mb-2 text-vl text-light"> <b> {{ (productionData.total/1000) }} K </b>
         <span class="text-xxl opacity-50"> Units </span>
       </p>
       <p class="text-sm text-success d-flex align-items-center justify-content-center" *ngIf="productionData.increment">
