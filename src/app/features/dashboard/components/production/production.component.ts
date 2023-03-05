@@ -15,12 +15,13 @@ export class ProductionComponent implements OnInit {
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
+    // fill: false,
+    // fillColor: "rgba(220,220,220,0)",
     legend: {
       display: true,
       position: 'bottom',
       align: 'center',
       labels: {
-        // fontColor: this.utilityService.cssVariables.secondary || '#0f48aa',
         fontSize: 14,
         boxWidth: 15,
         boxHeight: 15,
@@ -66,13 +67,17 @@ export class ProductionComponent implements OnInit {
 
   public barChartLabels: Label[] = [];
   public barChartColors = [
-    { backgroundColor: this.utilityService.cssVariables.secondary || '#e31c3d' },
+    { backgroundColor: this.utilityService.cssVariables['light-blue'] || '#e31c3d' },
     { backgroundColor: this.utilityService.cssVariables['sea-green'] || '#4aa564' },
   ]
 
   public barChartData: ChartDataSets[] = [
-    { data: [], label: 'Target Production' },
-    { data: [], label: 'Actual Production' },
+    {
+      data: [], label: 'Target Production', fill: false,
+    },
+    {
+      data: [], label: 'Actual Production', fill: false,
+    },
   ]
 
   productionData: any;

@@ -6,7 +6,8 @@
     <!-- doughnut chart -->
     <div class="col-12 d-flex justify-content-center align-items-center max-height">
       <canvas baseChart [datasets]="doughnutChartData" [labels]="doughnutChartLabels" [options]="chartOptions"
-        [chartType]="doughnutChartType" [plugins]="doughnutChartPlugins">
+        [chartType]="doughnutChartType">
+        <!-- [plugins]="doughnutChartPlugins" -->
       </canvas>
       <p class="mb-0 text-xxxl text-success percent-position"> 90% </p>
     </div>

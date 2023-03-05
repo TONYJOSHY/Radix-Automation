@@ -32,16 +32,10 @@ export class EfficiencyChartComponent implements OnInit {
     maintainAspectRatio: false,
     cutoutPercentage: 60,
     circumference: 1.8 * Math.PI,
-    // spacing: 0,
-    // hoverOffset: 20,
-    // borderJoinStyle: '',
-    // layout: {
-    //   padding: { bottom: 20 }
-    // },
     legend: {
       display: true,
-      position: 'top',
-      align: 'start',
+      position: 'bottom',
+      align: 'center',
       labels: {
         fontSize: 14,
         boxWidth: 15,

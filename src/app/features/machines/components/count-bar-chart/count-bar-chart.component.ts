@@ -11,16 +11,13 @@ import { UtilityService } from 'src/app/shared/services/utility/utility.service'
 export class CountBarChartComponent implements OnInit {
 
   public barChartOptions = {
-    // layout: {
-    //   padding: { bottom: 20 }
-    // },
     responsive: true,
     aspectRatio: 1,
     maintainAspectRatio: false,
     legend: {
       display: true,
-      position: 'top',
-      align: 'end',
+      position: 'bottom',
+      align: 'center',
       labels: {
         color: this.utilityService.cssVariables.primary || '#0f48aa',
         fontSize: 14,
@@ -30,15 +27,17 @@ export class CountBarChartComponent implements OnInit {
     },
     scales: {
       xAxes: [{
-        // barThickness: 30,
-        // maxBarThickness: 30,
         gridLines: {
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         }
       }],
       yAxes: [{
         display: true,
         gridLines: {
+          color: this.utilityService.cssVariables['gray-1'],
+          lineWidth: 0.15,
           zeroLineColor: this.utilityService.cssVariables.white || '#FFFFFF'
         },
         ticks: {
@@ -67,10 +66,6 @@ export class CountBarChartComponent implements OnInit {
         },
       },
     },
-    datalabels: {
-      anchor: 'end',
-      align: 'end'
-    }
   };
 
   public barChartType: ChartType = 'bar';
@@ -86,18 +81,13 @@ export class CountBarChartComponent implements OnInit {
     { data: [5, 10, 15, 10, 7], label: 'Actual Production' },
   ]
 
-  public barChartPlugins = [{
-    beforeInit: function (chart) {
-      chart.legend.afterFit = function () {
-        this.height = this.height + 15;
-      }
-    }
-  }];
-
-
   constructor(public utilityService: UtilityService) { }
 
   ngOnInit(): void {
+  }
+
+  calenderSelection(item) {
+
   }
 
 }

@@ -16,8 +16,8 @@
   --font-color: #000000;
   --font-color-2: #f9fafc;
   --font-color-3: #191c24;
-  --font-color-primary: #40180a;
-  --font-color-secondary: #263129;
+  --font-color-primary: #034310;
+  --font-color-secondary: #0d6eff;
   --label-field: #4a4a4a;
   --sea-green: #01a747; /* secondary-green */
   --grey1: #e0e0e0;
@@ -48,9 +48,8 @@
   --silver: #c7c7c7;
 
   --athens-gray: #e6e9ef;
-
   --dolphin: #676879;
-  --light-blue: #6394f6;
+  --light-blue: #1A6394f6;
 
   /* Font size for app - colors */
   --size-regular: 1.6rem;

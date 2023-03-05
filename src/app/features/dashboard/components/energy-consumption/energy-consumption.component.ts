@@ -19,7 +19,7 @@ export class EnergyConsumptionComponent implements OnInit {
     legend: {
       display: true,
       position: 'bottom',
-      align: 'start',
+      align: 'center',
       labels: {
         fontSize: 14,
         boxWidth: 15,

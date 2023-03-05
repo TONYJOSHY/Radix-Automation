@@ -3,7 +3,8 @@
     <div class="col-12 d-flex align-items-center justify-content-between">
       <p class="text-m text-light"> <b> Count </b> </p>
       <div>
-        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''">
+        <app-selectbox [options]="utilityService.calenderFilter" [nameField]="'name'" [defaultOptionId]="''"
+          (selectEvent)="calenderSelection($event)">
         </app-selectbox>
       </div>
     </div>
