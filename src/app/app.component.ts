@@ -10,8 +10,7 @@ import { MatIconRegisterService } from './shared/services/mat-icon-register/mat-
 export class AppComponent {
   title = 'angular-master';
 
-  constructor(public translate: TranslateService, private iconregister:MatIconRegisterService) {
-    translate.setDefaultLang('en');
+  constructor(private iconregister: MatIconRegisterService) {
     iconregister.RegisterIcon();
   }
 }

@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-       import('./auth/login/login.module').then((m) => m.LoginModule),
+      import('./auth/login/login.module').then((m) => m.LoginModule),
     data: { showComponents: false }
   },
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
