@@ -19,7 +19,7 @@ export class DataService {
   ) { }
 
   // Method to toast success/error messages (custom)
-  customSnackBar(message: string, type: string, panel: string) {
+  customSnackBar(message: string, type: string, panel?: string) {
     this.snackBar.openFromComponent(SnackBarComponent, {
       data: {
         message: message,

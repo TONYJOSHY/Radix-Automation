@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  // baseUrl: 'https://v1.dev.api.biochar.cied.in/v1',
-  baseUrl: 'http://localhost:1880',
-  wsBaseUrl: 'ws://localhost:1880/ws'
+  baseUrl: 'http://20.168.226.36:1880',
+  // wsBaseUrl: 'ws://localhost:1880/ws'
 };
 
 /*
