@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'http://20.168.226.36:1880',
+  // baseUrl: 'http://127.0.0.1:1880',
   // wsBaseUrl: 'ws://localhost:1880/ws'
 };
 

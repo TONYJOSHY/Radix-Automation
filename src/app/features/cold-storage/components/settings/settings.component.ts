@@ -13,7 +13,7 @@ export class SettingsComponent implements OnInit {
 
   settingsForm: FormGroup = this.fb.group({
     CONVEYORON: '',
-    filler_on: false,
+    FILLERON: '',
     CONVEYORSPEED: '',
     OFFTIME: '',
     ONTIME: '',
@@ -37,8 +37,8 @@ export class SettingsComponent implements OnInit {
 
   initForm() {
     this.settingsForm.patchValue({
-      CONVEYORON: false,
-      filler_on: false,
+      CONVEYORON: this.settingsData.CONVEYORON,
+      FILLERON: this.settingsData.FILLERON,
       CONVEYORSPEED: this.settingsData.CONVEYORSPEED,
       OFFTIME: this.settingsData.OFFTIME,
       ONTIME: this.settingsData.ONTIME,
@@ -65,10 +65,10 @@ export class SettingsComponent implements OnInit {
 
   submitForm() {
     this.isEdit = false;
-    this.machineService.postSettings(this.settingsForm.value)
+    this.machineService.postSettings({ data: this.settingsForm.value })
       .subscribe(() => {
         this.machineService.customMessage('Setting updated successfully.', 'success');
-        this.getSettings();
+        // this.getSettings();
       }, (err) => this.machineService.customMessage('Setting updated Failed.', 'error'))
   }
 

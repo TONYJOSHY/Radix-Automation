@@ -14,7 +14,7 @@ export class MachineService {
   }
 
   postSettings(data) {
-    let url = '/dataread'
+    let url = '/datawrite'
     return this.dataService.postData(url, data)
   }
 
