@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MachineService } from '../../services/machine.service';
+import { interval, Subscription, timer } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent implements OnInit, OnDestroy {
 
   isEdit = false;
 
@@ -25,14 +27,25 @@ export class SettingsComponent implements OnInit {
   })
 
   settingsData: any;
-
+  subscription: Subscription;
   get settings() { return this.settingsForm.controls }
 
   constructor(private fb: FormBuilder,
-    private machineService: MachineService) { }
+    private machineService: MachineService) {
+    this.getSettings();
+  }
 
   ngOnInit(): void {
-    this.getSettings();
+    const source = interval(5000);
+    this.subscription = source.pipe(
+      tap(() => {
+        if (!this.isEdit) this.getSettings()
+      })
+    ).subscribe();
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) this.subscription.unsubscribe();
   }
 
   initForm() {
