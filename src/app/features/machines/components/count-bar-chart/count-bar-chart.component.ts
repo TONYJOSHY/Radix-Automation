@@ -44,7 +44,7 @@ export class CountBarChartComponent implements OnInit {
         ticks: {
           beginAtZero: true,
           min: 0,
-          max: 2000
+          // max: 2000
         }
       }]
     },

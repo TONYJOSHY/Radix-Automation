@@ -7,4 +7,11 @@
   background-color: var(--emerald);
 }
 
+.checkbox ::ng-deep .mat-checkbox-inner-container{
+  border: 1px solid var(--white);
+}
+
+.checkbox ::ng-deep .mat-checkbox-label{
+  font-size: var(--size-small) !important;
+}
 

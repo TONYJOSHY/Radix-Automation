@@ -12,6 +12,7 @@ import { tap } from 'rxjs/operators';
 export class SettingsComponent implements OnInit, OnDestroy {
 
   isEdit = false;
+  enableAutoReload = false;
 
   settingsForm: FormGroup = this.fb.group({
     CONVEYORON: '',
@@ -36,16 +37,28 @@ export class SettingsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    const source = interval(5000);
-    this.subscription = source.pipe(
-      tap(() => {
-        if (!this.isEdit) this.getSettings()
-      })
-    ).subscribe();
+    this.reload();
   }
 
   ngOnDestroy() {
     if (this.subscription) this.subscription.unsubscribe();
+  }
+
+  setAutoReload(value) {
+    this.enableAutoReload = value;
+    this.reload();
+  }
+
+  reload() {
+    if (this.enableAutoReload) {
+      const source = interval(2000);
+      this.subscription = source.pipe(
+        tap(() => {
+          if (!this.isEdit) this.getSettings()
+        })).subscribe();
+    } else {
+      this.ngOnDestroy();
+    }
   }
 
   initForm() {
