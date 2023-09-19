@@ -33,11 +33,11 @@ export class SettingsComponent implements OnInit, OnDestroy {
 
   constructor(private fb: FormBuilder,
     private machineService: MachineService) {
-    this.getSettings();
+    // this.getSettings();
   }
 
   ngOnInit(): void {
-    this.reload();
+    // this.reload();
   }
 
   ngOnDestroy() {
@@ -46,7 +46,7 @@ export class SettingsComponent implements OnInit, OnDestroy {
 
   setAutoReload(value) {
     this.enableAutoReload = value;
-    this.reload();
+    // this.reload();
   }
 
   reload() {
@@ -91,11 +91,11 @@ export class SettingsComponent implements OnInit, OnDestroy {
 
   submitForm() {
     this.isEdit = false;
-    this.machineService.postSettings({ data: this.settingsForm.value })
-      .subscribe(() => {
-        this.machineService.customMessage('Setting updated successfully.', 'success');
-        // this.getSettings();
-      }, (err) => this.machineService.customMessage('Setting updated Failed.', 'error'))
+    // this.machineService.postSettings({ data: this.settingsForm.value })
+    //   .subscribe(() => {
+    //     this.machineService.customMessage('Setting updated successfully.', 'success');
+    //     // this.getSettings();
+    //   }, (err) => this.machineService.customMessage('Setting updated Failed.', 'error'))
   }
 
 }

@@ -30,13 +30,13 @@ const routes: Routes = [
             (m) => m.ColdStorageModule
           ),
       },
-      {
-        path: 'socket',
-        loadChildren: () =>
-          import('./websocket/websocket.module').then(
-            (m) => m.WebsocketModule
-          ),
-      }
+      // {
+      //   path: 'socket',
+      //   loadChildren: () =>
+      //     import('./websocket/websocket.module').then(
+      //       (m) => m.WebsocketModule
+      //     ),
+      // }
     ],
   }
 ];
